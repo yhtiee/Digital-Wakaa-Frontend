@@ -1,0 +1,62 @@
+#email__subscribe{
+    position: relative;
+    top: 15rem;
+    background: var(--color-primary);
+    padding: 0;
+    margin: 0;
+}
+
+.enail__container{
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.enail__container > div {
+    /* flex-basis: 250px; */
+    flex-grow: 1;
+}
+
+.enail__container > div > h4 {
+    color: white;
+}
+
+.form__wrapper > form > input{
+    background: green;
+    border: 1px solid white;
+    padding: 0.75rem;
+    color: white;
+    outline: none;
+    outline-style: none;
+    width: 15rem;
+}
+
+.form__wrapper > form > input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; /* Firefox */
+}
+
+.form__wrapper > form > input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: white;
+}
+
+.form__wrapper > form > input::-ms-input-placeholder { /* Microsoft Edge */
+color: white;
+}
+
+.form__wrapper > form > button {
+    background: var(--color-white);
+    color: var(--color-dark);
+    font-weight: bold;
+}
+
+.form__wrapper > form > button:hover{
+    background: black;
+    color: white;
+}

@@ -1,0 +1,48 @@
+#details{
+    position: relative;
+    top: 7rem;
+    background: var(--color-light);
+    padding: 0;
+    margin: 0;
+}
+
+.details__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    padding-top:2rem ;
+    padding-bottom:2rem ;
+}
+
+.details__container > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-white);
+    flex-basis: 250px;
+    height: 20rem;
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.delivery{
+    height: 80px;
+}
+
+.team{
+    height: 80px;
+}
+
+.support{
+    height: 60px;
+    margin-top: 2rem;
+}
+
+.refund{
+    height: 60px;
+    margin-top: 2rem;
+}
+

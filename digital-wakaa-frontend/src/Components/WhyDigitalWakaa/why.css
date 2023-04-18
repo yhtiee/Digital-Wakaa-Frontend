@@ -1,0 +1,51 @@
+#why__digitalWakaa{
+    background: var(--color-light);
+    position: relative;
+    top: 7rem;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.why__digitalWakaa__container{
+    padding-top:2rem ;
+    padding-bottom:2rem ;
+}
+
+.why{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.why > img {
+    height: 50px;
+    width: 25%;
+}
+
+.why > h4 {
+    text-align: center;
+}
+
+.why > p {
+    text-align: center;
+}
+
+.why__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    
+}
+
+.why__wrapper > div {
+    background: var(--color-white);
+    flex-basis: 250px;
+    flex-grow: 1;
+}

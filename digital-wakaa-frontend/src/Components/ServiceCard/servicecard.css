@@ -1,0 +1,53 @@
+#service__card{
+    position: relative;
+    top: 7rem;
+    background: var(--color-white);
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5rem;
+}
+
+.service__card{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.service__card__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    background: var(--color-light);
+}
+
+.service__card__wrapper > div {
+    flex-basis: 250px;
+    flex-grow: 1;
+}
+
+.service__card__left{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.service__card___right{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    gap: 0.5rem;
+}
+
+.service__card___right > h2 {
+    color: var(--color-secondary);
+}
+
+.service__card__left > img {
+    height: 300px;
+    width: 100%;
+}

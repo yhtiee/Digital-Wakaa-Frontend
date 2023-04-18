@@ -1,0 +1,50 @@
+#academy{
+    background: var(--color-white);
+    position: relative;
+    top: 10rem;
+    padding: 0;
+    margin: 0;
+}
+
+.academy__container{
+    padding-top:2rem ;
+    padding-bottom:2rem ;
+}
+
+.academy{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.academy > img {
+    height: 50px;
+    width: 25%;
+}
+
+.academy > h4 {
+    text-align: center;
+}
+
+.academy > p {
+    text-align: center;
+}
+
+.academy__wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    margin-top: 2rem;
+    
+}
+
+.academy__wrapper > div {
+    background: var(--color-light);
+    flex-basis: 250px;
+    flex-grow: 1;
+}
