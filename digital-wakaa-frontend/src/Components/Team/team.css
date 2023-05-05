@@ -1,0 +1,8 @@
+#team{
+    position: relative;
+    top: 15rem;
+    background: var(--color-white);
+    padding: 0;
+    margin: 0;
+    height: 10rem;
+}

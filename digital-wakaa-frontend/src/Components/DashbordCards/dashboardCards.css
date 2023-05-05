@@ -1,0 +1,7 @@
+.card__wrapper{
+    position: relative;
+    top: 7rem;
+    background: var(--color-white);
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,7 @@
+#facts{
+    position: relative;
+    top: 10rem;
+    background: var(--color-white);
+    padding: 0;
+    margin: 0;
+}

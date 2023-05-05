@@ -1,0 +1,38 @@
+.sidebar{
+    border-right: 1px solid whitesmoke;
+    height: 100vh;
+    width: 15rem;
+    background: var(--color-light);
+}
+
+.sidebar__header{
+    padding: 1rem;
+}
+
+.sidebar__header > .nav__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.link__items > ul > li > a{
+    padding: 1rem;
+    width: 100%;
+    color: var(--color-secondary);
+    display: flex;
+    gap: 0.5rem;
+    justify-content: left;
+    align-items: center;
+}
+
+
+
+.link__items > ul > li > a:hover{
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.link__items > ul > li{
+    border: 1px solid whitesmoke;
+}

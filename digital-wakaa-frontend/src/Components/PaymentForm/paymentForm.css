@@ -1,0 +1,52 @@
+#payment{
+    position: relative;
+    top: 7rem;
+    background: var(--color-white);
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5rem;
+}
+
+.payment-form {
+    font-size: 16px;
+  }
+  
+  .card-label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .card-element-container {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+  }
+  
+  .CardElement {
+    border: none;
+    height: 40px;
+    width: 100%;
+  }
+  
+  .CardElement--focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .CardElement--invalid {
+    border-color: #9e2146;
+  }
+  
+  .payment__container > form > button {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .order__description > textarea{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    width: 100%;
+    height: 10rem;
+  }

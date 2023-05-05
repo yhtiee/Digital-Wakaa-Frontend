@@ -18,17 +18,132 @@
 
 .plans__wrapper > div {
     flex-basis: 250px;
-    height: 20rem;
+    height: 35rem;
     flex-grow: 1;
 }
 
-.plan > div {
+.plan__mini{
+    border: 1px solid orange;
+}
+
+.plan__pro{
+    border: 1px solid green;
+}
+
+.plan__master{
+    border: 1px solid var(--color-secondary);
+}
+
+.plan__header{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
 }
 
-.plan > div > h3 {
+.plan__mini > .plan__header{
+    background: orange;
+}
+
+.plan__pro > .plan__header {
+    background: green;
+}
+
+.plan__master > .plan__header {
+    background: var(--color-secondary);
+}
+
+.plan__mini > div > h3 {
     color: white;
+}
+
+.plan__pro > div > h3 {
+    color: white;
+}
+
+.plan__master > div > h3 {
+    color: white;
+}
+
+.plan__mini__cost > h2{
+    color: orange;
+}
+
+.plan__pro__cost > h2{
+    color: green;
+}
+
+.plan__master__cost > h2{
+    color: var(--color-secondary);
+}
+
+.plan__master__cost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan__mini__cost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan__pro__cost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.plan__master__cost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.other__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+ul{
+    margin-top: 1rem;
+}
+
+.currency{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.plan__mini > .other__wrapper > .currency > button{
+    background-color: orange;
+    font-size: larger;
+}
+
+.plan__pro > .other__wrapper > .currency > button{
+    background-color: green;
+    font-size: larger;
+}
+
+.plan__master > .other__wrapper > .currency > button{
+    background-color: var(--color-secondary);
+    font-size: larger;
+}
+
+.payment__button__wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
 }

@@ -12,17 +12,16 @@ import WhyDigitalWaka from '../Components/WhyDigitalWakaa/WhyDigitalWaka'
 
 const HomePage = () => {
   return (
-    <>
+    <div style={{display:"flex", flexDirection:"column", }}>
       <Nav/>
       <Header/>
-      <Details/>
       <Services/>
-      <WhyDigitalWaka/>
-      <AcademyCard/>
+      <Details/>
+      {/* <AcademyCard/> */}
       <Testimonials/>
       <EmailSubscribe/>
       <Footer/>
-    </>
+    </div>
   )
 }
 

@@ -17,9 +17,9 @@ const Details = () => {
                     <img src={SD} alt="" className='delivery'/>
                 </div>
                 <div className="detail__bottom">
-                    <h4>Speedy Delivery</h4>
+                    <h4>We Deliver With Speed </h4>
                     <p>
-                        We deliver our services within the shortest turnaround time (2 to 3 days )
+                    We prioritse working quickly and efficiently to deliver results that exceed your expectations. 
                     </p>
                 </div>
             </div>
@@ -28,9 +28,9 @@ const Details = () => {
                     <img src={ET} alt="" className='team' />
                 </div>
                 <div className="detail__bottom">
-                    <h4>Experienced Team</h4>
+                    <h4>Our Team Is Experienced </h4>
                     <p>
-                        We offer more than 8 years of global branding experience.
+                    Our digital marketing experts have over 5 years of experience in the industry.
                     </p>
                 </div>
             </div>
@@ -39,9 +39,9 @@ const Details = () => {
                     <img src={CS} alt="" className='support'/>
                 </div>
                 <div className="detail__bottom">
-                    <h4>24/7 Customer Support</h4>
+                    <h4>24/7 Quick Response</h4>
                     <p>
-                        Our sales team offers all round the clock customer support to prospects and clients
+                    When working with us, expect a prompt and efficient response to any questions or concerns, 24/7.
                     </p>
                 </div>
             </div>
@@ -52,7 +52,7 @@ const Details = () => {
                 <div className="detail__bottom">
                     <h4>100% Refund Guarantee</h4>
                     <p>
-                        In case you’re not satisfied with our creativity, we will return the payment.
+                    If you're not satisfied with our services, we'll issue a full refund, no questions asked.
                     </p>
                 </div>
             </div>

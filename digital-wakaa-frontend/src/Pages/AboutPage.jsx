@@ -7,15 +7,17 @@ import Footer from '../Components/Footer/Footer'
 import About from '../Components/About/About'
 import Facts from '../Components/Facts/Facts'
 import Team from '../Components/Team/Team'
+import WhyDigitalWaka from '../Components/WhyDigitalWakaa/WhyDigitalWaka'
 
 const AboutPage = () => {
   return (
     <>
       <Nav/>
       <About/>
-      <Facts/>
+      {/* <Facts/> */}
       <Team/>
       <Details/>
+      {/* <WhyDigitalWaka/> */}
       <Testimonials/>
       <EmailSubscribe/>
       <Footer/>

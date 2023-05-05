@@ -1,9 +1,12 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import "./accessService.css"
+import ServiceContext from '../../Context API/ServicesContext'
+
 
 const AccessService = () => {
-  let service = JSON.parse(localStorage.getItem("service"))
 
+  let {service} = useContext(ServiceContext)
+  
   return (
     <section id='access__service'>
       <div className="container access__service__container">

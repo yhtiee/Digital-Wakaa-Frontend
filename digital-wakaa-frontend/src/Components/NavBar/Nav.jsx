@@ -6,11 +6,27 @@ import {GiHamburgerMenu} from "react-icons/gi"
 import {AiOutlineClose} from "react-icons/ai"
 import "./nav.css"
 import { useState } from 'react'
+import { useContext, useEffect } from 'react';
+import BlogContext from '../../Context API/BlogContext';
+import ServiceContext from '../../Context API/ServicesContext';
+import AuthContext from '../../Context API/AuthContext';
 
 const Nav = () => {
+  
+  const [isLinkOptions, setLinkOptions] = useState(false)
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [activeNav, setActiveNav] = useState("home/")
-  const [user, setActiveUser] = useState(null)
+  // const [user, setActiveUser] = useState(false)
+  let {user} = useContext(AuthContext)
+  let {services} = useContext(ServiceContext)
+  let {miniService} = useContext(ServiceContext)
+  let {getMiniServices} = useContext(ServiceContext)
+  let {getServices} = useContext(ServiceContext)
+  let {getBlogList} = useContext(BlogContext)
+  let {retrieveService} = useContext(ServiceContext)
+  let {retrieveServiceWorks} = useContext(ServiceContext)
+  let {retrieveSpecificMiniServices} = useContext(ServiceContext)
+  let {retrieveSpecificMiniService} = useContext(ServiceContext)
 
   const openToogle = ()=>{
     setNavbarOpen(prev => !prev)
@@ -36,6 +52,12 @@ const Nav = () => {
     setActiveNav("academy/")
   }
 
+  const handleFunctionBlog = () => {
+    setNavbarOpen(false)
+    setActiveNav("/blog")
+    getBlogList()
+  }
+
   const handleFunctionSignup = () => {
     setNavbarOpen(false)
     setActiveNav("/signup")
@@ -58,32 +80,76 @@ const Nav = () => {
     setNavbarOpen(false)
   }
 
+  useEffect(() => {
+    getServices()
+    getMiniServices()
+    console.log(miniService)
+  }, [])
+
+  let getId = (e, id) => {
+    retrieveService(id)        
+    retrieveServiceWorks(id)
+    retrieveSpecificMiniServices(id)
+    setLinkOptions(false)
+  }
+
+  let getIdMiniService = (e, id, name) => {
+    retrieveSpecificMiniService(id, name)
+    setLinkOptions(false)
+  }
+
+
   return (
     <nav>
       <div className="container nav__container">
 
         <Link to='/' className='nav__logo' onClick={handleFunctionHome} >
-            <h3 className='logo1'>DIGITAL</h3>
-            <h3 className='logo2'>WAKAA</h3>
+            <h2 className='logo1'>DIGITAL</h2>
+            <h2 className='logo2'>WAKAA</h2>
         </Link>
         
-        <ul className={`nav__menu ${navbarOpen ? " show__menu" : ""}`}>
-            <li className='nav__links'><a href="/services" onClick={handleFunctionServices} className={activeNav === "/services" ? "active": " "}>SERVICES</a></li>
+        <ul className={`nav__menu ${navbarOpen ? " show__menu" : ""}`} >
+            <li className='nav__links' onMouseEnter={()=>setLinkOptions(true)}   onMouseLeave={()=>setLinkOptions(false)} ><a href="/services" id='services__link'  onClick={handleFunctionServices} className={activeNav === "/services" ? "active": " "}>SERVICES</a>
+            {
+            isLinkOptions === true &&
+            <div  className='services__link'>
+              {services.map((items, index) => {
+                return (
+                  <div key={items.id}>
+                    <Link onClick={e => getId(e, items.id)}>{items.name}</Link>
+                    {miniService.map((service) => {
+                      {
+                        if (service.service == index + 1){
+                          return (
+                            <div className='mini_services'  key={service.id}>
+                              <Link onClick={e => getIdMiniService(e, service.id, service.name)}>
+                              {service.name}
+                              </Link>
+                            </div>
+                          )
+                        }
+                      }
+                    })}
+                  </div>
+                )
+              })}
+            </div>
+            }
+            </li>
             <li className='nav__links'><a href="/about"  onClick={handleFunctionAbout} className={activeNav === "/about" ? "active": " "}>ABOUT</a></li>
-            <li className='nav__links'><a href="contact/"  onClick={handleFunctionContact} className={activeNav === "contact/" ? "active": " "}>CONTACT</a></li>
-            <li className='nav__links'><a href="academy/"  onClick={handleFunctionAcademy} className={activeNav ==="academy/" ? "active": " "}>ACADEMY</a></li>
+            <li className='nav__links'><a href="academy/"  onClick={handleFunctionAcademy} className={activeNav ==="academy/" ? "active": ""}>ACADEMY</a></li>
+            <li className='nav__links'><a href="/blog"  onClick={handleFunctionBlog} className={activeNav ==="/blog" ? "active": ""}>BLOG</a></li>
 
-            {user? (<><li className='nav__links'><a href="logout/"  onClick={handleFunctionLogout} className={activeNav ==="logout/" ? "active": " "}>LOGOUT</a></li>
-            <li><a href="#" download className="btn btn-primary" onClick={handleFunction}>DASHBORAD</a></li></>) : (<><li className='nav__links' id={activeNav ==="/signup" ? "active" : ""}><Link to="/signup"  onClick={handleFunctionSignup}
+            {user? (<>
+            <li><Link to="/dashboard" className="btn btn-primary" onClick={handleFunction}>DASHBORAD</Link></li> </>) : (<><li className='nav__links' id={activeNav ==="/signup" ? "active" : ""}><Link to="/signup"  onClick={handleFunctionSignup}
             >SIGNUP</Link></li>
             <li className='nav__links'><a href="/login"  onClick={handleFunctionLogin} className={activeNav ==="/login" ? "active": " "}>LOGIN</a></li></>)}
-            
-            
         </ul>
 
         <button onClick={openToogle}> {navbarOpen? <AiOutlineClose id='close-menu-btn'/> : <GiHamburgerMenu id='open-menu-btn' /> }</button>
         
       </div>
+    
     </nav>
   )
 }

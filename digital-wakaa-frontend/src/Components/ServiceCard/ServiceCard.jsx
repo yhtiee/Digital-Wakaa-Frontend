@@ -6,13 +6,19 @@ const ServiceCard = () => {
     let {services} = useContext(ServiceContext)
     let {getServices} = useContext(ServiceContext)
     let {retrieveService} = useContext(ServiceContext)
+    let {retrieveServiceWorks} = useContext(ServiceContext)
+    let {retrieveSpecificMiniServices} = useContext(ServiceContext)
+
+
 
     useEffect(() => {
         getServices()
     }, [])
 
-    let getId = (e, id) => {
-        retrieveService(id)
+    let getId = (e, id, name) => {
+        retrieveService(id, name)
+        retrieveServiceWorks(id)
+        retrieveSpecificMiniServices(id)
         console.log(id)
     }
 
@@ -29,9 +35,9 @@ const ServiceCard = () => {
                         <div className="service__card___right">
                             <h2>{items.name}</h2>
                             <p>{items.description}</p>
-                            <a href='/service' className='btn btn-primary' onClick={e => getId(e, items.id)}>
+                            <button className='btn btn-primary' onClick={e => getId(e, items.id, items.name)}>
                                 Get Started
-                            </a>
+                            </button>
                         </div>
                     </div>
                   )

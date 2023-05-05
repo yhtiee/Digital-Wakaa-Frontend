@@ -1,6 +1,6 @@
 #details{
     position: relative;
-    top: 7rem;
+    top: 10rem;
     background: var(--color-light);
     padding: 0;
     margin: 0;
@@ -29,7 +29,7 @@
 }
 
 .delivery{
-    height: 80px;
+    height: 70px;
 }
 
 .team{
@@ -46,3 +46,6 @@
     margin-top: 2rem;
 }
 
+.detail__bottom > p, h4{
+    text-align: center;
+}

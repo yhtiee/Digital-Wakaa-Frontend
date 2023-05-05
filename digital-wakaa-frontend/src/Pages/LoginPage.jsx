@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Nav from '../Components/NavBar/Nav'
 import Details from '../Components/ServicesDetails/Details'
 import Testimonials from '../Components/Testimonials/Testimonials'
@@ -9,6 +9,11 @@ import LoginForm from '../Components/Login/LoginForm'
 import Services from '../Components/Services/Services'
 
 const LoginPage = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
         <Nav/>
