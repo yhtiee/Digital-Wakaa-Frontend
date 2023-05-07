@@ -120,7 +120,7 @@ export const ServiceProvider = ({children}) => {
                 if (name == "YouTube script-writing"){
                     navigate("/youtube")
                 }
-                if (name == "Blog writing"){
+                if (name == "Blog like a boss with our expert writing services!"){
                     navigate("/blog_writing")
                 }
                 if (name == "Copywriting"){

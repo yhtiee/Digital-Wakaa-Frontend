@@ -12,6 +12,7 @@ const Details = () => {
   return (
     <section id='details'> 
         <div className='container details__container'>
+            <h2>We Don't Mean To Brag But</h2>
             <div className='detail'>
                 <div className="detail__top">
                     <img src={SD} alt="" className='delivery'/>

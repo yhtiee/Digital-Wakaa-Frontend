@@ -8,7 +8,7 @@ const Testimonials = () => {
     <section id='testimonials'>
       <div className="container testimonial__container">
         <div className="testimonials">
-          <h2 className='testimonal__heading'> Even our clients brag for us</h2>
+          <h2 className='testimonal__heading'> Even Our Clients Brag For Us</h2>
         </div>
         <div className="testimonial__wrapper">
             <div className="testimonial">

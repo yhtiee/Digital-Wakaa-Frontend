@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import "./plans.css"
 import { TiTick } from "react-icons/ti";
 import { useNavigate } from 'react-router-dom';
 import API_URL from '../../Context API/API';
+import { PaystackButton } from 'react-paystack'
+import AuthContext from '../../Context API/AuthContext';
 
 const Blogwritingplans = () => {
 
   let navigate = useNavigate()
-
   let [price, setPrice] = useState(`$${100}`)
   let [pricePro, setPricePro] = useState(`$${200}`)
   let [priceMaster, setPriceMaster] = useState(`$${400}`)
-
-  let [user, setUser] = useState(true)
-
+  let {user} = useContext(AuthContext)
+  
   let changeToNaira = () => {
     if (price[0] === "₦"){
       setPrice(price)
@@ -55,6 +55,23 @@ const Blogwritingplans = () => {
 
   let Payment = () => {
     navigate("/payment")
+  }
+
+  let checkPay = () => {
+    navigate("/login")
+  }
+
+  let publicKey = "pk_test_f17a7430a2ad1631ac37e78fe8e0527b096e1b58"
+  let email = JSON.parse(localStorage.getItem("email"))
+
+  let paymentMini = {
+    email,
+    amount:7500000,
+    publicKey,
+    text: "Paystack",
+    // onSuccess: () =>
+    //   alert("Thanks for doing business with us! Come back soon!!"),
+    // onClose: () => alert("Wait! You need this oil, don't go!!!!"),
   }
 
   let changeToDollar = () => {
@@ -112,9 +129,10 @@ const Blogwritingplans = () => {
                       Stripe
                     </button>
                   </form>
-                  <button className='btn' onClick={Payment}>
+                  {user? <PaystackButton {...paymentMini} className='btn'/>:
+                  <button className='btn' onClick={checkPay}>
                     Paystcak
-                  </button>
+                  </button>}
                 </div>
                 <p>Speedy Delivery Between 2-3 Days</p>
               </div>

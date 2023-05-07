@@ -33,6 +33,8 @@ export const AuthProvider = ({children}) => {
             if(response.status === 201){
                 navigate("/login")
                 console.log(data)
+                let email = data.email
+                localStorage.setItem("email", JSON.stringify(email))
             }
         }
         else{

@@ -8,8 +8,7 @@ const Header = () => {
        <div className='container header__container'>
             <div className="header__left">
                <div>
-                    <h1> We're thrilled you found us! </h1>
-                    {/* <div> <h1 className='logo1'>Digital</h1> <h1 className='logo2'>Wakaa</h1> </div> */}
+                    <h1> We're Thrilled You Found Us! </h1>
                     <p>
                        Now that you are here, let's turn your online goals into achievements. 
                     </p>
