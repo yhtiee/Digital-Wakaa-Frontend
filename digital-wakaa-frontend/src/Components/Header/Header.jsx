@@ -1,6 +1,7 @@
 import React from 'react'
 import CE from '../../Assets/header.jpeg'
 import "./header.css"
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -12,7 +13,7 @@ const Header = () => {
                     <p>
                        Now that you are here, let's turn your online goals into achievements. 
                     </p>
-                    <a href="/services" className='btn btn-primary btn-lg' id='button'> Get Started </a>
+                    <Link to="/services" className='btn btn-primary btn-lg' id='button'> Get Started </Link>
                </div>
             </div>  
             <div className="header__right">

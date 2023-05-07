@@ -136,14 +136,14 @@ const Nav = () => {
             </div>
             }
             </li>
-            <li className='nav__links'><a href="/about"  onClick={handleFunctionAbout} className={activeNav === "/about" ? "active": " "}>ABOUT</a></li>
-            <li className='nav__links'><a href="academy/"  onClick={handleFunctionAcademy} className={activeNav ==="academy/" ? "active": ""}>ACADEMY</a></li>
-            <li className='nav__links'><a href="/blog"  onClick={handleFunctionBlog} className={activeNav ==="/blog" ? "active": ""}>BLOG</a></li>
+            <li className='nav__links'><Link to="/about"  onClick={handleFunctionAbout} className={activeNav === "/about" ? "active": " "}>ABOUT</Link></li>
+            <li className='nav__links'><Link to="academy/"  onClick={handleFunctionAcademy} className={activeNav ==="academy/" ? "active": ""}>ACADEMY</Link></li>
+            <li className='nav__links'><Link to="/blog"  onClick={handleFunctionBlog} className={activeNav ==="/blog" ? "active": ""}>BLOG</Link></li>
 
             {user? (<>
             <li><Link to="/dashboard" className="btn btn-primary" onClick={handleFunction}>DASHBORAD</Link></li> </>) : (<><li className='nav__links' id={activeNav ==="/signup" ? "active" : ""}><Link to="/signup"  onClick={handleFunctionSignup}
             >SIGNUP</Link></li>
-            <li className='nav__links'><a href="/login"  onClick={handleFunctionLogin} className={activeNav ==="/login" ? "active": " "}>LOGIN</a></li></>)}
+            <li className='nav__links'><Link to="/login"  onClick={handleFunctionLogin} className={activeNav ==="/login" ? "active": " "}>LOGIN</Link></li></>)}
         </ul>
 
         <button onClick={openToogle}> {navbarOpen? <AiOutlineClose id='close-menu-btn'/> : <GiHamburgerMenu id='open-menu-btn' /> }</button>
