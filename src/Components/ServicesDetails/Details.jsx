@@ -1,9 +1,9 @@
 import React from 'react'
 import "./details.css"
-import CS from '../../Assets/customer-support.png'
-import SD from '../../Assets/ecommerce.png'
-import ET from '../../Assets/people.png'
-import RG from '../../Assets/refund.png'
+import CS from '../../assets/customer-support.png'
+import SD from '../../assets/ecommerce.png'
+import ET from '../../assets/people.png'
+import RG from '../../assets/refund.png'
 
 
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import CE from '../../Assets/header.jpeg'
+import CE from '../../assets/header.jpeg'
 import "./header.css"
 import { Link } from 'react-router-dom'
 
