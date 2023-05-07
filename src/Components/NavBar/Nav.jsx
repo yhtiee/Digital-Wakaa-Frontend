@@ -109,7 +109,7 @@ const Nav = () => {
         </Link>
         
         <ul className={`nav__menu ${navbarOpen ? " show__menu" : ""}`} >
-            <li className='nav__links' onMouseEnter={()=>setLinkOptions(true)}   onMouseLeave={()=>setLinkOptions(false)} ><a href="/services" id='services__link'  onClick={handleFunctionServices} className={activeNav === "/services" ? "active": " "}>SERVICES</a>
+            <li className='nav__links' onMouseEnter={()=>setLinkOptions(true)}   onMouseLeave={()=>setLinkOptions(false)} ><Link to="/services" id='services__link'  onClick={handleFunctionServices} className={activeNav === "/services" ? "active": " "}>SERVICES</Link>
             {
             isLinkOptions === true &&
             <div  className='services__link'>
