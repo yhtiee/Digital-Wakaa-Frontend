@@ -120,13 +120,13 @@ export const ServiceProvider = ({children}) => {
                 if (name == "Youtube Script Writing"){
                     navigate("/youtube")
                 }
-                if (name == "Blog like a boss with our expert writing services!"){
+                if (name == "SEO Blog Writing"){
                     navigate("/blog_writing")
                 }
                 if (name == "Copywriting"){
                     navigate("/copywriting")
                 }
-                if (name == "Social media management"){
+                if (name == "Social Media Management"){
                     navigate("/social_media")
                 }
                 if (name == "Email copywriting"){

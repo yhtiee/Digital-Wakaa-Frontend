@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Nav from '../Components/NavBar/Nav'
 import Details from '../Components/ServicesDetails/Details'
 import Testimonials from '../Components/Testimonials/Testimonials'
@@ -9,14 +9,18 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import LocalSEOplans from '../Components/Plans/LocalSEOplans'
+import LocalSEODescriptions from '../Components/MiniServiceDescripion/LocalSEODescriptions'
 
 const LocalSEO = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
     <Nav/>
     <AccessMiniService/>
+    <LocalSEODescriptions/>
     <LocalSEOplans/>
-    <AboutService/>
     <Details/>
     <Testimonials/>
     <EmailSubscribe/>

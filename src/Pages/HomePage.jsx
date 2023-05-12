@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Nav from '../Components/NavBar/Nav'
 import Header from '../Components/Header/Header'
 import Details from '../Components/ServicesDetails/Details'
@@ -11,6 +11,11 @@ import Footer from '../Components/Footer/Footer'
 import WhyDigitalWaka from '../Components/WhyDigitalWakaa/WhyDigitalWaka'
 
 const HomePage = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div style={{display:"flex", flexDirection:"column", }}>
       <Nav/>

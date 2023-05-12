@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Nav from '../Components/NavBar/Nav'
 import Details from '../Components/ServicesDetails/Details'
 import Testimonials from '../Components/Testimonials/Testimonials'
@@ -10,6 +10,11 @@ import Team from '../Components/Team/Team'
 import WhyDigitalWaka from '../Components/WhyDigitalWakaa/WhyDigitalWaka'
 
 const AboutPage = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Nav/>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Nav from '../Components/NavBar/Nav'
 import Details from '../Components/ServicesDetails/Details'
 import Testimonials from '../Components/Testimonials/Testimonials'
@@ -12,6 +12,11 @@ import Blogwritingplans from '../Components/Plans/Blogwritingplans'
 import BlogWritingDescripion from '../Components/MiniServiceDescripion/BlogWritingDescripion'
 
 const BlogWriting = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
     <Nav/>

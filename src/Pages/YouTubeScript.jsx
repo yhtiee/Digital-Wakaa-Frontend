@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Nav from '../Components/NavBar/Nav'
 import Details from '../Components/ServicesDetails/Details'
 import Testimonials from '../Components/Testimonials/Testimonials'
@@ -12,6 +12,9 @@ import YouTubeplans from '../Components/Plans/YouTubeplans'
 import YoutubeScriptDescription from '../Components/MiniServiceDescripion/YoutubeScriptDescription'
 
 const YouTubeScript = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
      <Nav/>

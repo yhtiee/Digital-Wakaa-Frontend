@@ -18,9 +18,6 @@ const LoginPage = () => {
     <>
         <Nav/>
         <LoginForm/>
-        <Services/>
-        <Details/>
-        <Testimonials/>
         <EmailSubscribe/>
         <Footer/>
     </>

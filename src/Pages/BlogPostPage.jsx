@@ -18,8 +18,8 @@ const BlogPostPage = () => {
     <>
       <Nav/>
       <BlogPost/>
-      {/* <Details/> */}
       <Services/>
+      <Details/>
       {/* <WhyDigitalWaka/> */}
       <Testimonials/>
       <EmailSubscribe/>
