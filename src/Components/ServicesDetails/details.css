@@ -6,7 +6,11 @@
     margin: 0;
 }
 
-.details__container{
+.details__container > h2{
+    padding-top: 2rem;
+}
+
+.details__wrapper{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -16,7 +20,7 @@
     padding-bottom:2rem ;
 }
 
-.details__container > div{
+.details__wrapper > div{
     display: flex;
     flex-direction: column;
     justify-content: center;

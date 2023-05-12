@@ -19,7 +19,6 @@ const Service = () => {
         <Nav/>
         <AccessService/>
         <MiniService/>
-        <AboutService/>
         <Details/>
         <Testimonials/>
         <EmailSubscribe/>

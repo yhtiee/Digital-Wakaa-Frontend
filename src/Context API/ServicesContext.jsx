@@ -117,10 +117,10 @@ export const ServiceProvider = ({children}) => {
                 miniService.push(data)
                 setRerievedService(miniService)
                 console.log(data)
-                if (name == "Youtube Script Writing"){
+                if (name == "Lights, Camera, Scripts!"){
                     navigate("/youtube")
                 }
-                if (name == "SEO Blog Writing"){
+                if (name == "Blog Like A Boss With Our Expert Writing Services!"){
                     navigate("/blog_writing")
                 }
                 if (name == "Copywriting"){

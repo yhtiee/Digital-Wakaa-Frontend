@@ -43,3 +43,8 @@
 .mini_service > p {
     text-align: center;
 }
+
+.mini_service > button {
+    float: right;
+    margin-top: 1rem;
+}
