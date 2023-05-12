@@ -9,14 +9,16 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import YouTubeplans from '../Components/Plans/YouTubeplans'
+import YoutubeScriptDescription from '../Components/MiniServiceDescripion/YoutubeScriptDescription'
 
 const YouTubeScript = () => {
   return (
     <>
      <Nav/>
      <AccessMiniService/>
+    <YoutubeScriptDescription/>
      <YouTubeplans/>
-     <AboutService/>
+     {/* <AboutService/> */}
      <Details/>
      <Testimonials/>
      <EmailSubscribe/>

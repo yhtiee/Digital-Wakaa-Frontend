@@ -21,7 +21,7 @@
     flex-basis: 380px;
     flex-grow: 1;
     background: var(--color-light);
-    padding: 2rem;
+    padding: 3rem;
     color: black;
     /* height: 15rem; */
     /* width: 33.3%; */
@@ -38,4 +38,8 @@
 
 .mini_service > h4{
     color: var(--color-secondary);
+}
+
+.mini_service > p {
+    text-align: center;
 }

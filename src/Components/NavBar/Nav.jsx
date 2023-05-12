@@ -137,7 +137,7 @@ const Nav = () => {
             }
             </li>
             <li className='nav__links'><Link to="/about"  onClick={handleFunctionAbout} className={activeNav === "/about" ? "active": " "}>ABOUT</Link></li>
-            <li className='nav__links'><Link to="academy/"  onClick={handleFunctionAcademy} className={activeNav ==="academy/" ? "active": ""}>ACADEMY</Link></li>
+            {/* <li className='nav__links'><Link to="academy/"  onClick={handleFunctionAcademy} className={activeNav ==="academy/" ? "active": ""}>ACADEMY</Link></li> */}
             <li className='nav__links'><Link to="/blog"  onClick={handleFunctionBlog} className={activeNav ==="/blog" ? "active": ""}>BLOG</Link></li>
 
             {user? (<>

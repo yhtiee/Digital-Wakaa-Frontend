@@ -117,7 +117,7 @@ export const ServiceProvider = ({children}) => {
                 miniService.push(data)
                 setRerievedService(miniService)
                 console.log(data)
-                if (name == "YouTube script-writing"){
+                if (name == "Youtube Script Writing"){
                     navigate("/youtube")
                 }
                 if (name == "Blog like a boss with our expert writing services!"){

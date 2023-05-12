@@ -9,14 +9,16 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Blogwritingplans from '../Components/Plans/Blogwritingplans'
+import BlogWritingDescripion from '../Components/MiniServiceDescripion/BlogWritingDescripion'
 
 const BlogWriting = () => {
   return (
     <>
     <Nav/>
     <AccessMiniService/>
+    <BlogWritingDescripion/>
     <Blogwritingplans/>
-    <AboutService/>
+    {/* <AboutService/> */}
     <Details/>
     <Testimonials/>
     <EmailSubscribe/>
