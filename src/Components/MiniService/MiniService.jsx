@@ -10,6 +10,8 @@ const MiniService = () => {
 
     let getId = (e, id, name) => {
         retrieveSpecificMiniService(id, name)
+        localStorage.setItem("MiniServiceID", JSON.stringify(id))
+        localStorage.setItem("MiniServiceName", JSON.stringify(name))
     }
   return (
     <section id='mini__service'>

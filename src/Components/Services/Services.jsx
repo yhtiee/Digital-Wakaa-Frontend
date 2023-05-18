@@ -13,14 +13,14 @@ const Services = () => {
   let {retrieveService} = useContext(ServiceContext)
   let {retrieveServiceWorks} = useContext(ServiceContext)
 
-
-
   useEffect(() => {
     getServices()
   }, [])
 
   let getId = (e, id, name) => {
     retrieveService(id, name)
+    localStorage.setItem("serviceID", JSON.stringify(id))
+    localStorage.setItem("serviceName", JSON.stringify(name))
     retrieveServiceWorks(id)
     console.log(id)
 }

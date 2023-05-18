@@ -6,6 +6,14 @@ import ServiceContext from '../../Context API/ServicesContext'
 const AccessMiniService = () => {
 
   let {retrievedMiniService} = useContext(ServiceContext)
+  let {retrieveSpecificMiniService} = useContext(ServiceContext)
+
+  let MiniServiceID = JSON.parse(localStorage.getItem("MiniServiceID"))
+  let MiniServiceName = JSON.parse(localStorage.getItem("MiniServiceName"))
+
+  useEffect(() => {
+    retrieveSpecificMiniService(MiniServiceID, MiniServiceName)
+  }, [])
   
   return (
     <section id='access__service'>

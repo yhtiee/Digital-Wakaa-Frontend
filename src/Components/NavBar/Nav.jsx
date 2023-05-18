@@ -86,8 +86,10 @@ const Nav = () => {
     console.log(miniService)
   }, [])
 
-  let getId = (e, id) => {
-    retrieveService(id)        
+  let getId = (e, id, name) => {
+    retrieveService(id, name)        
+    localStorage.setItem("serviceID", JSON.stringify(id))
+    localStorage.setItem("serviceName", JSON.stringify(name))
     retrieveServiceWorks(id)
     retrieveSpecificMiniServices(id)
     setLinkOptions(false)
@@ -95,6 +97,8 @@ const Nav = () => {
 
   let getIdMiniService = (e, id, name) => {
     retrieveSpecificMiniService(id, name)
+    localStorage.setItem("MiniServiceID", JSON.stringify(id))
+    localStorage.setItem("MiniServiceName", JSON.stringify(name))
     setLinkOptions(false)
   }
 
@@ -116,7 +120,7 @@ const Nav = () => {
               {services.map((items, index) => {
                 return (
                   <div key={items.id}>
-                    <Link onClick={e => getId(e, items.id)}>{items.name}</Link>
+                    <Link onClick={e => getId(e, items.id, items.name)}>{items.name}</Link>
                     {miniService.map((service) => {
                       {
                         if (service.service == index + 1){

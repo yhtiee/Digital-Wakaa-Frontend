@@ -17,6 +17,8 @@ const ServiceCard = () => {
 
     let getId = (e, id, name) => {
         retrieveService(id, name)
+        localStorage.setItem("serviceID", JSON.stringify(id))
+        localStorage.setItem("serviceName", JSON.stringify(name))
         retrieveServiceWorks(id)
         retrieveSpecificMiniServices(id)
         console.log(id)

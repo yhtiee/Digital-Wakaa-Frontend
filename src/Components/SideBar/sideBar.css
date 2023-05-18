@@ -1,8 +1,11 @@
 .sidebar{
     border-right: 1px solid whitesmoke;
-    height: 100vh;
-    width: 15rem;
+    min-height: 100vh;
+    /* flex: 1; */
+    position: absolute;
+    width: 17.7%;
     background: var(--color-light);
+    z-index: 1;
 }
 
 .sidebar__header{

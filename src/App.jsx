@@ -20,7 +20,6 @@ import { BlogProvider } from './Context API/BlogContext';
 import Layout from './Pages/Layout/Layout';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import DashboardCards from './Components/DashbordCards/DashboardCards';
-import Orders from './Pages/Orders';
 import MiniServicePage from './Pages/MiniServicePage';
 import YouTubeScript from './Pages/YouTubeScript';
 import WordPressweb from './Pages/WordPressweb';
@@ -42,6 +41,9 @@ import Ecommerce from './Pages/Ecommerce';
 import Copywriting from './Pages/Copywriting';
 import BlogWriting from './Pages/BlogWriting';
 import { AuthProvider } from './Context API/AuthContext';
+import Orders from './Pages/Dashboard/OrdersPage';
+import { OrderProvider } from './Context API/OrdersContext';
+import TechnicalSEO from './Pages/TechnicalSEO';
 
 
 
@@ -50,6 +52,7 @@ function App() {
     <>
       <BrowserRouter>
       <AuthProvider>
+        <OrderProvider>
         <BlogProvider>
           <ServiceProvider>
               <Routes>
@@ -63,6 +66,7 @@ function App() {
                   <Route path="/post" element={<BlogPostPage/>}/>
                   <Route path="/" element={<HomePage/>}/>
                   <Route path="/dashboard" element={<Dashboard/>}/>
+                  <Route path="/orders" element={<Orders/>}/>
                   <Route path="/blog_writing" element={<BlogWriting/>}/>
                   <Route path="/copywriting" element={<Copywriting/>}/>
                   <Route path="/ecommerce" element={<Ecommerce/>}/>
@@ -78,13 +82,14 @@ function App() {
                   <Route path="/logo_design" element={<Logodesign/>}/>
                   <Route path="/seo_blog" element={<SEOblog/>}/>
                   <Route path="/social_media" element={<Socialmedia/>}/>
-                  <Route path="/technical_seo" element={<TechnicalSEOplans/>}/>
+                  <Route path="/technical_seo" element={<TechnicalSEO/>}/>
                   <Route path="/video_editing" element={<Videoediting/>}/>
                   <Route path="/wordpress" element={<WordPressweb/>}/>
                   <Route path="/youtube" element={<YouTubeScript/>}/>
               </Routes>
           </ServiceProvider>
         </BlogProvider>
+        </OrderProvider>
         </AuthProvider>
       </BrowserRouter>
     </>

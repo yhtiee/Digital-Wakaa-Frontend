@@ -80,7 +80,7 @@ const DashboardNavBar = () => {
             <li className='nav__links'><Link to="/services" onClick={handleFunctionServices} className={activeNav === "/services" ? "active": " "}>SERVICES</Link></li>
             <li className='nav__links'><a href="/about"  onClick={handleFunctionAbout} className={activeNav === "/about" ? "active": " "}>ABOUT</a></li>
             <li className='nav__links'><a href="contact/"  onClick={handleFunctionContact} className={activeNav === "contact/" ? "active": ""}>CONTACT</a></li>
-            <li className='nav__links'><a href="academy/"  onClick={handleFunctionAcademy} className={activeNav ==="academy/" ? "active": ""}>ACADEMY</a></li>
+            {/* <li className='nav__links'><a href="academy/"  onClick={handleFunctionAcademy} className={activeNav ==="academy/" ? "active": ""}>ACADEMY</a></li> */}
             <li className='nav__links'><a href="/blog"  onClick={handleFunctionBlog} className={activeNav ==="/blog" ? "active": ""}>BLOG</a></li>
 
             {user? (<>

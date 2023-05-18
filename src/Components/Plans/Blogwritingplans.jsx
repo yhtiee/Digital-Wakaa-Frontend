@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react'
 import "./plans.css"
 import { TiTick } from "react-icons/ti";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import API_URL from '../../Context API/API';
 import { PaystackButton } from 'react-paystack'
 import AuthContext from '../../Context API/AuthContext';
+import { loadStripe } from '@stripe/stripe-js';
+import OrderContext from '../../Context API/OrdersContext';
 
 const Blogwritingplans = () => {
 
@@ -13,6 +15,7 @@ const Blogwritingplans = () => {
   let [pricePro, setPricePro] = useState(`$${200}`)
   let [priceMaster, setPriceMaster] = useState(`$${400}`)
   let {user} = useContext(AuthContext)
+  let {createOrder} = useContext(OrderContext)
   
   let changeToNaira = () => {
     if (price[0] === "₦"){
@@ -64,13 +67,16 @@ const Blogwritingplans = () => {
   let publicKey = "pk_test_f17a7430a2ad1631ac37e78fe8e0527b096e1b58"
   let email = JSON.parse(localStorage.getItem("email"))
 
+  let serviceMini ="Blog Like A Boss With Our Expert Writing Services!"
+  let costMini=75000.00
+  let status = "Pending"
+
   let paymentMini = {
     email,
     amount:7500000,
     publicKey,
     text: "Paystack",
-    // onSuccess: () =>
-    //   alert("Thanks for doing business with us! Come back soon!!"),
+    onSuccess: () => createOrder(serviceMini, costMini, status),
     // onClose: () => alert("Wait! You need this oil, don't go!!!!"),
   }
 
@@ -86,9 +92,35 @@ const Blogwritingplans = () => {
     setPriceMaster(`$${400}`)
   }
 
+
+  let stripePromise;
+  const getStripe = () => {
+    if (!stripePromise) {
+      stripePromise = loadStripe('pk_test_51MpHv9AqvujLwHfeu0Xq0KJEOgTtcE3YmI9AvSnbt1EySQDmKTKdPTAYGTp4YdwU9McIcw0e96Lg9xfF6BV63IXU00hjexiEJR');
+    }
+    return stripePromise;
+  };
+
+  async function handleCheckout() {
+    const stripe = await getStripe();
+    const { error } = await stripe.redirectToCheckout({
+      lineItems: [
+        {
+          price: "price_1MzKY3AqvujLwHfepgWIcVI6",
+          quantity: 1,
+        },
+      ],
+      mode :'payment',
+      successUrl: `http://localhost:5173`,
+      cancelUrl: `http://localhost:5173`,
+      customerEmail: 'customer@email.com',
+    });
+    console.warn(error.message);
+  }
+
   let Check = () =>{
     if (user){
-      return
+      handleCheckout()
     }
     else{
       navigate("/login")
@@ -125,11 +157,9 @@ const Blogwritingplans = () => {
                   <h2>{price}</h2>
                 </div>
                 <div className='payment__button__wrapper'>
-                  <form action={user? `${API_URL}/api/stripe/content_management_mini/create-checkout-session`: ""} onSubmit={Check} method="POST">
-                    <button type="submit" className='btn'>
+                    <button type="submit" className='btn' onClick={Check}>
                       Stripe
                     </button>
-                  </form>
                   {user? <PaystackButton {...paymentMini} className='btn'/>:
                   <button className='btn' onClick={checkPay}>
                     Paystcak
