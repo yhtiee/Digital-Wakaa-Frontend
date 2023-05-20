@@ -66,7 +66,7 @@ const Footer = () => {
                         <p>© 2012 - 2023 DigitalWakaa. All Rights Reserved.</p>
                     </div>
                     <div className="right">
-                        <p>Please Checkout Our <a href="">Privacy and Cookie Policies</a> and <a href="">Terms</a></p>
+                        <p>Checkout Our <a href="">Privacy and Cookie Policies</a> and <a href="">Terms</a></p>
                     </div>
                 </div>
             </div>

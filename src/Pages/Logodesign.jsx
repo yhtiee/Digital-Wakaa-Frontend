@@ -9,6 +9,7 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Logodesignplans from '../Components/Plans/Logodesignplans'
+import LogoDesignDescription from '../Components/MiniServiceDescripion/LogoDesignDescription'
 
 const Logodesign = () => {
   useEffect(() => {
@@ -18,6 +19,7 @@ const Logodesign = () => {
     <>
     <Nav/>
     <AccessMiniService/>
+    <LogoDesignDescription/>
     <Logodesignplans/>
     <AboutService/>
     <Details/>

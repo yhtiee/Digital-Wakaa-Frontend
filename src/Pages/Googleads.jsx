@@ -9,6 +9,7 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Googleadsplans from '../Components/Plans/Googleadsplans'
+import GoogleAdsDescription from '../Components/MiniServiceDescripion/GoogleAdsDescription'
 
 const Googleads = () => {
 
@@ -20,6 +21,7 @@ const Googleads = () => {
     <>
     <Nav/>
     <AccessMiniService/>
+    <GoogleAdsDescription/>
     <Googleadsplans/>
     <AboutService/>
     <Details/>

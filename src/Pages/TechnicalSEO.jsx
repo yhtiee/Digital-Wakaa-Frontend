@@ -9,6 +9,7 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import TechnicalSEOplans from '../Components/Plans/TechnicalSEOplans'
+import TechnicalSEODescription from '../Components/MiniServiceDescripion/TechnicalSEODescription'
 
 const TechnicalSEO = () => {
   useEffect(() => {
@@ -18,6 +19,7 @@ const TechnicalSEO = () => {
     <>
     <Nav/>
     <AccessMiniService/>
+    <TechnicalSEODescription/>
     <TechnicalSEOplans/>
     <AboutService/>
     <Details/>

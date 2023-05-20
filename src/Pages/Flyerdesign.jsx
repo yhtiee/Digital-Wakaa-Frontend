@@ -9,6 +9,7 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Flyerdesignplans from '../Components/Plans/Flyerdesignplans'
+import FlyerDesignDescription from '../Components/MiniServiceDescripion/FlyerDesignDescription'
 
 const Flyerdesign = () => {
 
@@ -20,6 +21,7 @@ const Flyerdesign = () => {
     <>
     <Nav/>
     <AccessMiniService/>
+    <FlyerDesignDescription/>
     <Flyerdesignplans/>
     <AboutService/>
     <Details/>

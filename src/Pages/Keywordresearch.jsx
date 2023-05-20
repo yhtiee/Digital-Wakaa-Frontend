@@ -9,6 +9,7 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import Keywordresearchplans from '../Components/Plans/Keywordresearchplans'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
+import KeyWordResearchDescription from '../Components/MiniServiceDescripion/KeyWordResearchDescription'
 
 const Keywordresearch = () => {
   useEffect(() => {
@@ -18,6 +19,7 @@ const Keywordresearch = () => {
     <>
     <Nav/>
     <AccessMiniService/>
+    <KeyWordResearchDescription/>
     <Keywordresearchplans/>
     <AboutService/>
     <Details/>

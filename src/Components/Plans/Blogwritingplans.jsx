@@ -72,7 +72,7 @@ const Blogwritingplans = () => {
   let status = "Pending"
 
   let paymentMini = {
-    email,
+    email : email,
     amount:7500000,
     publicKey,
     text: "Paystack",
@@ -113,9 +113,13 @@ const Blogwritingplans = () => {
       mode :'payment',
       successUrl: `http://localhost:5173`,
       cancelUrl: `http://localhost:5173`,
-      customerEmail: 'customer@email.com',
+      customerEmail: email,
     });
-    console.warn(error.message);
+    if (error) {
+      console.warn(error.message);
+    } else {
+      () => createOrder(serviceMini, costMini, status)
+    }
   }
 
   let Check = () =>{
