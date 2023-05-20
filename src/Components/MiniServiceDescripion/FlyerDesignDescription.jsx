@@ -29,9 +29,9 @@ const FlyerDesignDescription = () => {
                         </div>
                     </div>
                 </div>
-                <hr />
+                <hr /> 
                 <div className="dec__bottom">
-                    <h2>Lot’s Of Designers, Here’s Why We Stand Out</h2>
+                 <h2>Lot’s Of Designers, Here’s Why We Stand Out</h2>
                     <div className="job">
                         <div className="job__one">
                             <h4>100% White Label Excellence</h4>

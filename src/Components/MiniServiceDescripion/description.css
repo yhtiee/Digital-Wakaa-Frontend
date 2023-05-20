@@ -11,6 +11,14 @@
     gap: 3rem;
 }
 
+.description__wrapper > div  > h2 {
+    text-align: center;
+}
+
+.description__wrapper > div  > p {
+    text-align: center;
+}
+
 .des__top > p{
     margin-top: 1rem;
 }
