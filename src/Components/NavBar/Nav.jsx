@@ -16,6 +16,7 @@ const Nav = () => {
   const [isLinkOptions, setLinkOptions] = useState(false)
   const [navbarOpen, setNavbarOpen] = useState(false)
   const [activeNav, setActiveNav] = useState("home/")
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
   // const [user, setActiveUser] = useState(false)
   let {user} = useContext(AuthContext)
   let {services} = useContext(ServiceContext)
@@ -80,11 +81,6 @@ const Nav = () => {
     setNavbarOpen(false)
   }
 
-  useEffect(() => {
-    getServices()
-    getMiniServices()
-    console.log(miniService)
-  }, [])
 
   let getId = (e, id, name) => {
     retrieveService(id, name)        
@@ -102,6 +98,19 @@ const Nav = () => {
     setLinkOptions(false)
   }
 
+  useEffect(() => {
+    getServices()
+    getMiniServices()
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth > 1024);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [])
+
 
   return (
     <nav>
@@ -113,7 +122,7 @@ const Nav = () => {
         </Link>
         
         <ul className={`nav__menu ${navbarOpen ? " show__menu" : ""}`} >
-            <li className='nav__links' onMouseEnter={()=>setLinkOptions(true)}   onMouseLeave={()=>setLinkOptions(false)} ><Link to="/services" id='services__link'  onClick={handleFunctionServices} className={activeNav === "/services" ? "active": " "}>SERVICES</Link>
+            <li className='nav__links' onMouseEnter={isLargeScreen ? () => setLinkOptions(true) : null}  onMouseLeave={()=>setLinkOptions(false)} ><Link to="/services" id='services__link'  onClick={handleFunctionServices} className={activeNav === "/services" ? "active": " "}>SERVICES</Link>
             {
             isLinkOptions === true &&
             <div  className='services__link'>

@@ -11,6 +11,10 @@
     gap: 3rem;
 }
 
+.des__top > p{
+    margin-top: 1rem;
+}
+
 .description__wrapper > hr {
     border: 0.5px solid black;
 }
