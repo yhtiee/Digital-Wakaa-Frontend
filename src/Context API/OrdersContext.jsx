@@ -40,6 +40,30 @@ export const OrderProvider = ({children}) => {
     }
   }
 
+  async function getAllOrders(){
+    let token = JSON.parse(localStorage.getItem("authTokens"))
+    let access = token.access
+
+    let response = await fetch (`${API_URL}orders/all_orders/`, {  
+        method: "GET",
+        headers: {
+          'Authorization': `Bearer ${access}`,
+          'Content-Type': 'application/json'
+        },
+       
+    })
+    if (response.ok){
+        let data = await response.json()
+        if(response.status === 200){
+            console.log(data.orders)
+            setOrders(data.orders)
+        }
+    }
+    else{
+        console.log("error")
+    }
+  }
+
   async function getTotalOrders(){
     let token = JSON.parse(localStorage.getItem("authTokens"))
     let access = token.access
@@ -143,7 +167,9 @@ export const OrderProvider = ({children}) => {
     completedOrders : completedOrders,
     getCompletedOrders : getCompletedOrders,
     getCancelledOrders : getCancelledOrders,
-    cancelledOrders : cancelledOrders
+    cancelledOrders : cancelledOrders,
+    getAllOrders : getAllOrders,
+    orders : orders
   }
     
   
