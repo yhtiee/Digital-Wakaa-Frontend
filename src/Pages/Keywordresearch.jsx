@@ -10,6 +10,7 @@ import MiniService from '../Components/MiniService/MiniService'
 import Keywordresearchplans from '../Components/Plans/Keywordresearchplans'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import KeyWordResearchDescription from '../Components/MiniServiceDescripion/KeyWordResearchDescription'
+import "./pages.css"
 
 const Keywordresearch = () => {
   useEffect(() => {
@@ -18,13 +19,13 @@ const Keywordresearch = () => {
   return (
     <>
     <Nav/>
-    <AccessMiniService/>
-    <KeyWordResearchDescription/>
-    <Keywordresearchplans/>
-    <AboutService/>
-    <Details/>
-    <Testimonials/>
-    <EmailSubscribe/>
+    <div className='pageComponent'>
+      <AccessMiniService/>
+      <Keywordresearchplans/>
+      <KeyWordResearchDescription/>
+      <Details/>
+      <Testimonials/>
+    </div>
     <Footer/>
     </>
   )

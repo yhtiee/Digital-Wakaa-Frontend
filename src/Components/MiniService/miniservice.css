@@ -1,10 +1,7 @@
 #mini__service{
-    position: relative;
-    top: 7rem;
     background: var(--color-white);
     padding: 0;
     margin: 0;
-    margin-bottom: 5rem;
 }
 
 .mini__service__wrapper{
@@ -23,8 +20,13 @@
     background: var(--color-light);
     padding: 3rem;
     color: black;
+    border-radius: 20px;
     /* height: 15rem; */
     /* width: 33.3%; */
+}
+
+.mini__service__container > h2{
+    text-align: center;
 }
 
 .mini_service:hover{
@@ -44,7 +46,12 @@
     text-align: center;
 }
 
-.mini_service > button {
-    float: right;
+.mini_service > .btn-wrapper >  button {
     margin-top: 1rem;
+}
+
+.mini_service > .btn-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

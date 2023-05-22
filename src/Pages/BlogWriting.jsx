@@ -10,6 +10,7 @@ import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Blogwritingplans from '../Components/Plans/Blogwritingplans'
 import BlogWritingDescripion from '../Components/MiniServiceDescripion/BlogWritingDescripion'
+import "./pages.css"
 
 const BlogWriting = () => {
 
@@ -20,13 +21,13 @@ const BlogWriting = () => {
   return (
     <>
     <Nav/>
-    <AccessMiniService/>
-    <BlogWritingDescripion/>
-    <Blogwritingplans/>
-    {/* <AboutService/> */}
-    <Details/>
-    <Testimonials/>
-    <EmailSubscribe/>
+    <div className='pageComponent'>
+      <AccessMiniService/>
+      <Blogwritingplans/>
+      <BlogWritingDescripion/>
+      <Details/>
+      <Testimonials/>
+    </div>
     <Footer/>
     </>
   )

@@ -10,6 +10,7 @@ import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Flyerdesignplans from '../Components/Plans/Flyerdesignplans'
 import FlyerDesignDescription from '../Components/MiniServiceDescripion/FlyerDesignDescription'
+import "./pages.css"
 
 const Flyerdesign = () => {
 
@@ -20,13 +21,14 @@ const Flyerdesign = () => {
   return (
     <>
     <Nav/>
-    <AccessMiniService/>
-    <FlyerDesignDescription/>
-    <Flyerdesignplans/>
-    <AboutService/>
-    <Details/>
-    <Testimonials/>
-    <EmailSubscribe/>
+    <div className="pageComponent">
+      <AccessMiniService/>
+      <Flyerdesignplans/>
+      <FlyerDesignDescription/>
+      <AboutService/>
+      <Details/>
+      <Testimonials/>
+    </div>
     <Footer/>
     </>
   )

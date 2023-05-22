@@ -9,6 +9,7 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Ecommerceplans from '../Components/Plans/Ecommerceplans'
+import "./pages.css"
 
 const Ecommerce = () => {
 
@@ -19,12 +20,13 @@ const Ecommerce = () => {
   return (
     <>
         <Nav/>
-        <AccessMiniService/>
-        <Ecommerceplans/>
-        <AboutService/>
-        <Details/>
-        <Testimonials/>
-        <EmailSubscribe/>
+        <div className='pageComponent'>
+          <AccessMiniService/>
+          <Ecommerceplans/>
+          <AboutService/>
+          <Details/>
+          <Testimonials/>
+        </div>
         <Footer/>
     </>
   )

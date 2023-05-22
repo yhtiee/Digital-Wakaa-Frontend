@@ -9,6 +9,7 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Videoeditingplans from '../Components/Plans/Videoeditingplans'
+import "./pages.css"
 
 const Videoediting = () => {
   useEffect(() => {
@@ -17,12 +18,13 @@ const Videoediting = () => {
   return (
     <>
     <Nav/>
+    <div className="pageComponent">
     <AccessMiniService/>
     <Videoeditingplans/>
     <AboutService/>
     <Details/>
     <Testimonials/>
-    <EmailSubscribe/>
+    </div>
     <Footer/>
     </>
   )

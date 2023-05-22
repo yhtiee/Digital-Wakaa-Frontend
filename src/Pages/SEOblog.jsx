@@ -9,6 +9,7 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import SEOblogplans from '../Components/Plans/SEOblogplans'
+import "./pages.css"
 
 const SEOblog = () => {
   useEffect(() => {
@@ -17,12 +18,13 @@ const SEOblog = () => {
   return (
     <>
     <Nav/>
+    <div className="pageComponent">
     <AccessMiniService/>
     <SEOblogplans/>
     <AboutService/>
     <Details/>
     <Testimonials/>
-    <EmailSubscribe/>
+    </div>
     <Footer/>
     </>
   )

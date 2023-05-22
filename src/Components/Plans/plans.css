@@ -1,10 +1,7 @@
 #plans{
-    position: relative;
-    top: 8rem;
     background: var(--color-white);
     padding: 0;
     margin: 0;
-    margin-bottom: 5rem;
 }
 
 .plans__wrapper{

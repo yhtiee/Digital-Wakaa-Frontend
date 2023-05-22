@@ -9,6 +9,7 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Landingpagesplans from '../Components/Plans/Landingpagesplans'
+import "./pages.css"
 
 const Landingpages = () => {
   useEffect(() => {
@@ -17,12 +18,13 @@ const Landingpages = () => {
   return (
     <>
     <Nav/>
-    <AccessMiniService/>
-    <Landingpagesplans/>
-    <AboutService/>
-    <Details/>
-    <Testimonials/>
-    <EmailSubscribe/>
+    <div className='pageComponent'>
+      <AccessMiniService/>
+      <Landingpagesplans/>
+      <AboutService/>
+      <Details/>
+      <Testimonials/>
+    </div>
     <Footer/>
     </>
   )

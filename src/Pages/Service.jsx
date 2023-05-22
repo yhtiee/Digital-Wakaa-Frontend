@@ -7,6 +7,7 @@ import Footer from '../Components/Footer/Footer'
 import AccessService from '../Components/AccessService/AccessService'
 import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
+import "./pages.css"
 
 const Service = () => {
 
@@ -17,11 +18,12 @@ const Service = () => {
   return (
     <>
         <Nav/>
+        <div className="pageComponent">
         <AccessService/>
         <MiniService/>
         <Details/>
         <Testimonials/>
-        <EmailSubscribe/>
+        </div>
         <Footer/>
     </>
   )

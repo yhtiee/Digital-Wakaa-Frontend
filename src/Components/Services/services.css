@@ -1,6 +1,6 @@
 #services{
     position: relative;
-    top: 10rem;
+    top: 2rem;
     background: var(--color-white);
     padding: 0;
     margin: 0;
@@ -9,6 +9,10 @@
 .services__container{
     padding-top:2rem ;
     padding-bottom:2rem ;
+}
+
+.service__mainwrapper > h2{
+    text-align: center;
 }
 
 .wrapper{

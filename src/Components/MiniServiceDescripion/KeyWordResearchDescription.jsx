@@ -3,7 +3,7 @@ import "./description.css"
 
 const KeyWordResearchDescription = () => {
   return (
-    <section id='descripions'>
+    <div id='descripions'>
         <div className="container descripion__container">
             <div className="description__wrapper">
                 <div className="des__top">
@@ -63,7 +63,7 @@ const KeyWordResearchDescription = () => {
                 </div>
             </div>
         </div>
-    </section>
+    </div>
   )
 }
 

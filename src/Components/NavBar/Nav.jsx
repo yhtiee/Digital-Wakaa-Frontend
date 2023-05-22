@@ -10,6 +10,7 @@ import { useContext, useEffect } from 'react';
 import BlogContext from '../../Context API/BlogContext';
 import ServiceContext from '../../Context API/ServicesContext';
 import AuthContext from '../../Context API/AuthContext';
+import logo from "../../assets/logo.svg"
 
 const Nav = () => {
   
@@ -119,6 +120,7 @@ const Nav = () => {
         <Link to='/' className='nav__logo' onClick={handleFunctionHome} >
             <h2 className='logo1'>DIGITAL</h2>
             <h2 className='logo2'>WAKAA</h2>
+          {/* <img src={logo} className="logo" alt="logo" /> */}
         </Link>
         
         <ul className={`nav__menu ${navbarOpen ? " show__menu" : ""}`} >

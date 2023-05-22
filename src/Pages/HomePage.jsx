@@ -9,6 +9,7 @@ import Testimonials from '../Components/Testimonials/Testimonials'
 import EmailSubscribe from '../Components/EmailSubscribe/EmailSubscribe'
 import Footer from '../Components/Footer/Footer'
 import WhyDigitalWaka from '../Components/WhyDigitalWakaa/WhyDigitalWaka'
+import "./pages.css"
 
 const HomePage = () => {
 
@@ -20,11 +21,11 @@ const HomePage = () => {
     <div style={{display:"flex", flexDirection:"column", }}>
       <Nav/>
       <Header/>
-      <Services/>
-      <Details/>
-      {/* <AcademyCard/> */}
-      <Testimonials/>
-      <EmailSubscribe/>
+      <div className="pageComponent">
+        <Services/>
+        <Details/>
+        <Testimonials/>
+      </div>
       <Footer/>
     </div>
   )

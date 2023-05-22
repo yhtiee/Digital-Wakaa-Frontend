@@ -5,6 +5,7 @@ import Testimonials from '../Components/Testimonials/Testimonials'
 import EmailSubscribe from '../Components/EmailSubscribe/EmailSubscribe'
 import Footer from '../Components/Footer/Footer'
 import ServiceCard from '../Components/ServiceCard/ServiceCard'
+import "./pages.css"
 
 const ServicesPage = () => {
   useEffect(() => {
@@ -14,9 +15,10 @@ const ServicesPage = () => {
     <>
       <Nav/>
       <ServiceCard/>
+      <div className="pageComponent">
       <Details/>
       <Testimonials/>
-      <EmailSubscribe/>
+      </div>
       <Footer/>
     </>
   )

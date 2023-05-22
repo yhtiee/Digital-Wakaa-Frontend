@@ -9,6 +9,7 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import WordPresswebplans from '../Components/Plans/WordPresswebplans'
+import "./pages.css"
 
 const WordPressweb = () => {
   useEffect(() => {
@@ -17,12 +18,13 @@ const WordPressweb = () => {
   return (
     <>
     <Nav/>
+    <div className="pageComponent">
     <AccessMiniService/>
     <WordPresswebplans/>
     <AboutService/>
     <Details/>
     <Testimonials/>
-    <EmailSubscribe/>
+    </div>
     <Footer/>
     </>
   )

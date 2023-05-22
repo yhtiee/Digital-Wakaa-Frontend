@@ -108,6 +108,10 @@ nav button{
         gap: 0.5rem;
     }
 
+    .logo{
+        height: 4%;
+    }
+
     .nav__menu{
         position: fixed;
         top: 5rem;

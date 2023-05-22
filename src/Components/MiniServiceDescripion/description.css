@@ -1,9 +1,3 @@
-#descripions{
-    position: relative;
-    top: 7rem;
-    /* border: 1px solid black; */
-    background: var(--color-light);
-}
 
 .description__wrapper{
     display: flex;

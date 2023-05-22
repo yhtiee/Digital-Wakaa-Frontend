@@ -27,9 +27,11 @@ const MiniService = () => {
                         <Link key={items.id} className='mini_service' onClick={e => getId(e, items.id, items.name)}>         
                             <h4>{items.name}</h4>
                             <p>{items.description}</p>
-                            <button className='btn' onClick={e => getId(e, items.id, items.name)}>
-                                learn more
-                            </button>
+                            <div className="btn-wrapper">
+                                <button className='btn' onClick={e => getId(e, items.id, items.name)}>
+                                    learn more
+                                </button>
+                            </div>
                         </Link>
                     )
                 })}

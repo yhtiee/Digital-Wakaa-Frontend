@@ -9,6 +9,7 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Emailcopywritingplans from '../Components/Plans/Emailcopywritingplans'
+import "./pages.css"
 
 const Emailcopywriting = () => {
 
@@ -19,12 +20,13 @@ const Emailcopywriting = () => {
   return (
     <>
     <Nav/>
-    <AccessMiniService/>
-    <Emailcopywritingplans/>
-    <AboutService/>
-    <Details/>
-    <Testimonials/>
-    <EmailSubscribe/>
+    <div className='pageComponnet'>
+      <AccessMiniService/>
+      <Emailcopywritingplans/>
+      <AboutService/>
+      <Details/>
+      <Testimonials/>
+    </div>
     <Footer/>
     </>
   )

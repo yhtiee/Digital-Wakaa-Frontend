@@ -9,6 +9,7 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import LeadGenerationplans from '../Components/Plans/LeadGenerationplans'
+import "./pages.css"
 
 const LeadGeneration = () => {
   useEffect(() => {
@@ -17,12 +18,13 @@ const LeadGeneration = () => {
   return (
     <>
     <Nav/>
-    <AccessMiniService/>
-    <LeadGenerationplans/>
-    <AboutService/>
-    <Details/>
-    <Testimonials/>
-    <EmailSubscribe/>
+    <div className="pageComponent">
+      <AccessMiniService/>
+      <LeadGenerationplans/>
+      <AboutService/>
+      <Details/>
+      <Testimonials/>
+    </div>
     <Footer/>
     </>
   )

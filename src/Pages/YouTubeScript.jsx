@@ -10,6 +10,7 @@ import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import YouTubeplans from '../Components/Plans/YouTubeplans'
 import YoutubeScriptDescription from '../Components/MiniServiceDescripion/YoutubeScriptDescription'
+import "./pages.css"
 
 const YouTubeScript = () => {
   useEffect(() => {
@@ -18,13 +19,13 @@ const YouTubeScript = () => {
   return (
     <>
      <Nav/>
-     <AccessMiniService/>
-    <YoutubeScriptDescription/>
-     <YouTubeplans/>
-     {/* <AboutService/> */}
-     <Details/>
-     <Testimonials/>
-     <EmailSubscribe/>
+      <div className="pageComponent">
+        <AccessMiniService/>
+        <YouTubeplans/>
+        <YoutubeScriptDescription/>
+        <Details/>
+        <Testimonials/>
+      </div>
      <Footer/>
     </>
   )

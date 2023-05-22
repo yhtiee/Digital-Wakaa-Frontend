@@ -10,6 +10,7 @@ import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Googleadsplans from '../Components/Plans/Googleadsplans'
 import GoogleAdsDescription from '../Components/MiniServiceDescripion/GoogleAdsDescription'
+import "./pages.css"
 
 const Googleads = () => {
 
@@ -20,13 +21,14 @@ const Googleads = () => {
   return (
     <>
     <Nav/>
-    <AccessMiniService/>
-    <GoogleAdsDescription/>
-    <Googleadsplans/>
-    <AboutService/>
-    <Details/>
-    <Testimonials/>
-    <EmailSubscribe/>
+    <div className="pageComponent">
+      <AccessMiniService/>
+      <Googleadsplans/>
+      <GoogleAdsDescription/>
+      <AboutService/>
+      <Details/>
+      <Testimonials/>
+    </div>
     <Footer/>
     </>
   )

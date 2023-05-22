@@ -9,6 +9,7 @@ import AboutService from '../Components/AboutService/AboutService'
 import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Fullstackwebplans from '../Components/Plans/Fullstackwebplans'
+import "./pages.css"
 
 const Fullstackweb = () => {
 
@@ -19,12 +20,13 @@ const Fullstackweb = () => {
   return (
     <>
     <Nav/>
-    <AccessMiniService/>
-    <Fullstackwebplans/>
-    <AboutService/>
-    <Details/>
-    <Testimonials/>
-    <EmailSubscribe/>
+    <div className='pageComponent'>
+      <AccessMiniService/>
+      <Fullstackwebplans/>
+      <AboutService/>
+      <Details/>
+      <Testimonials/>
+    </div>
     <Footer/>
     </>
   )

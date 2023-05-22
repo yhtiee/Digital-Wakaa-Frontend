@@ -10,6 +10,7 @@ import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Copywritingplans from '../Components/Plans/Copywritingplans'
 import CopyWritingDescription from '../Components/MiniServiceDescripion/CopyWritingDescription'
+import "./pages.css"
 
 const Copywriting = () => {
 
@@ -20,12 +21,13 @@ const Copywriting = () => {
   return (
     <>
     <Nav/>
-    <AccessMiniService/>
-    <CopyWritingDescription/>
-    <Copywritingplans/>
-    <Details/>
-    <Testimonials/>
-    <EmailSubscribe/>
+    <div className='pageComponent'>
+      <AccessMiniService/>
+      <Copywritingplans/>
+      <CopyWritingDescription/>
+      <Details/>
+      <Testimonials/>
+    </div>
     <Footer/>
     </>
   )

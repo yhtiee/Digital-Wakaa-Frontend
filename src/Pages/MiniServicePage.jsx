@@ -7,7 +7,7 @@ import Testimonials from '../Components/Testimonials/Testimonials'
 import EmailSubscribe from '../Components/EmailSubscribe/EmailSubscribe'
 import Footer from '../Components/Footer/Footer'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
-
+import "./pages.css"
 
 const MiniServicePage = () => {
 
@@ -18,11 +18,13 @@ const MiniServicePage = () => {
   return (
     <>
         <Nav/>
-        <AccessMiniService/>
-        <PlansCard/>
-        <Details/>
-        <Testimonials/>
-        <EmailSubscribe/>
+        <div className="pageComponent">
+          <AccessMiniService/>
+          <LocalSEOplans/>
+          <LocalSEODescriptions/>
+          <Details/>
+          <Testimonials/>
+        </div>
         <Footer/>
     </>
   )

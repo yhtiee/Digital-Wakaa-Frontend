@@ -5,7 +5,7 @@ import IMG1 from "../../assets/client1.jpg"
 
 const Testimonials = () => {
   return (
-    <section id='testimonials'>
+    <div id='testimonials'>
       <div className="container testimonial__container">
         <div className="testimonials">
           <h2 className='testimonal__heading'> Don't Just Take Our Word For It, Here’s Proof </h2>
@@ -41,7 +41,7 @@ const Testimonials = () => {
             </div>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

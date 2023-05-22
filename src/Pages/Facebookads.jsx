@@ -10,6 +10,7 @@ import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Facebookadsplans from '../Components/Plans/Facebookadsplans'
 import FacebookAdsDescription from '../Components/MiniServiceDescripion/FacebookAdsDescription'
+import "./pages.css"
 
 const Facebookads = () => {
 
@@ -20,12 +21,13 @@ const Facebookads = () => {
   return (
     <>
     <Nav/>
+    <div className="pageComponent">
     <AccessMiniService/>
-    <FacebookAdsDescription/>
     <Facebookadsplans/>
+    <FacebookAdsDescription/>
     <Details/>
     <Testimonials/>
-    <EmailSubscribe/>
+    </div>
     <Footer/>
     </>
   )

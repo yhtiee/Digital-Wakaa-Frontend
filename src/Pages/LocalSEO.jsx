@@ -10,6 +10,7 @@ import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import LocalSEOplans from '../Components/Plans/LocalSEOplans'
 import LocalSEODescriptions from '../Components/MiniServiceDescripion/LocalSEODescriptions'
+import "./pages.css"
 
 const LocalSEO = () => {
   useEffect(() => {
@@ -18,12 +19,13 @@ const LocalSEO = () => {
   return (
     <>
     <Nav/>
-    <AccessMiniService/>
-    <LocalSEODescriptions/>
-    <LocalSEOplans/>
-    <Details/>
-    <Testimonials/>
-    <EmailSubscribe/>
+    <div className="pageComponent">
+      <AccessMiniService/>
+      <LocalSEOplans/>
+      <LocalSEODescriptions/>
+      <Details/>
+      <Testimonials/>
+    </div>
     <Footer/>
     </>
   )

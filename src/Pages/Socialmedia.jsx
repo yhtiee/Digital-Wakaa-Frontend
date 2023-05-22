@@ -10,6 +10,7 @@ import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Socialmediaplans from '../Components/Plans/Socialmediaplans'
 import SocialMediaDescription from '../Components/MiniServiceDescripion/SocialMediaDescription'
+import "./pages.css"
 
 const Socialmedia = () => {
   useEffect(() => {
@@ -18,12 +19,13 @@ const Socialmedia = () => {
   return (
     <>
     <Nav/>
+    <div className="pageComponent">
     <AccessMiniService/>
-    <SocialMediaDescription/>
     <Socialmediaplans/>
+    <SocialMediaDescription/>
     <Details/>
     <Testimonials/>
-    <EmailSubscribe/>
+    </div>
     <Footer/>
     </>
   )

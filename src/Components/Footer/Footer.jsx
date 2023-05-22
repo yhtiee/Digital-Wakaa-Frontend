@@ -4,10 +4,13 @@ import IMG1 from "../../assets/facebook.png"
 import IMG2 from "../../assets/insta.png"
 import IMG3 from "../../assets/twitter.png"
 import IMG4 from "../../assets/linkedin.png"
+import EmailSubscribe from '../EmailSubscribe/EmailSubscribe'
 
 const Footer = () => {
   return (
-    <section id='footer'>
+    <>
+    <div id='footer'>
+    <EmailSubscribe/>
         <div className="container footer__container">
             <div className="footer__top">
                 <div className="services">
@@ -71,7 +74,9 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    </>
+    
   )
 }
 

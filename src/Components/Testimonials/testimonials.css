@@ -1,9 +1,10 @@
 #testimonials{
     background: #0288D1;
-    position: relative;
-    top: 17rem;
     padding: 0;
     margin: 0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    padding-bottom: 2rem;
 }
 
 .testimonal__heading{
@@ -34,6 +35,11 @@
     height: 15rem;
     flex-grow: 1;
     background: var(--color-white);
+    border-radius: 20px;
+}
+
+.testimonials > h2{
+    text-align: center;
 }
 
 .testimonial{

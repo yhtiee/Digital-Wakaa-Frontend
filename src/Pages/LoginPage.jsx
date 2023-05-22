@@ -7,6 +7,7 @@ import Footer from '../Components/Footer/Footer'
 import SignupForm from '../Components/Signup/SignupForm'
 import LoginForm from '../Components/Login/LoginForm'
 import Services from '../Components/Services/Services'
+import "./pages.css"
 
 const LoginPage = () => {
 
@@ -18,7 +19,6 @@ const LoginPage = () => {
     <>
         <Nav/>
         <LoginForm/>
-        <EmailSubscribe/>
         <Footer/>
     </>
   )

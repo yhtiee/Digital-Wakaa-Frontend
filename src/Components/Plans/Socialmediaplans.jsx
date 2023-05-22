@@ -82,7 +82,6 @@ const Socialmediaplans = () => {
   return (
     <section id='plans'>
       <div className="container plans__container">
-      <h2>Ready To Start Your Social Media Management Journey With Us? Order now!</h2>
         <div className="plans__wrapper">
           <div className='plan__mini'>
               <div className='plan__header'>
