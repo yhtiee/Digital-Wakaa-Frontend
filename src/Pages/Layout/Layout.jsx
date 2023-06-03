@@ -1,15 +1,14 @@
 import React from 'react'
 import SideBar from '../../Components/SideBar/SideBar'
-import DashboardNavBar from '../../Components/DashboardNavBar/DashboardNavBar'
-
 import { Outlet } from 'react-router-dom'
+import DashboardNav from '../../Components/DashboardNav/DashboardNav'
 
 const Layout = () => {
   return (
     <div className='layout-wrapper' style={{display:"flex"}}>
       <SideBar/>
       <div style={{width:"90%"}} >
-        <DashboardNavBar/>
+        <DashboardNav/>
         <div style={{ padding:"5rem"}}>
           <Outlet/>
         </div>
