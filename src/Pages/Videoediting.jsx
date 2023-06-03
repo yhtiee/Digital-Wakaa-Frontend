@@ -10,6 +10,7 @@ import MiniService from '../Components/MiniService/MiniService'
 import AccessMiniService from '../Components/AccessMiniService/AccessMiniService'
 import Videoeditingplans from '../Components/Plans/Videoeditingplans'
 import "./pages.css"
+import VideoEditing from '../Components/MiniServiceDescripion/VideoEditing'
 
 const Videoediting = () => {
   useEffect(() => {
@@ -21,7 +22,7 @@ const Videoediting = () => {
     <div className="pageComponent">
     <AccessMiniService/>
     <Videoeditingplans/>
-    <AboutService/>
+    <VideoEditing/>
     <Details/>
     <Testimonials/>
     </div>

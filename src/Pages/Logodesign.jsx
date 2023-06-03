@@ -18,13 +18,13 @@ const Logodesign = () => {
   return (
     <>
     <Nav/>
-    <AccessMiniService/>
-    <LogoDesignDescription/>
-    <Logodesignplans/>
-    <AboutService/>
-    <Details/>
-    <Testimonials/>
-    <EmailSubscribe/>
+    <div className="pageComponent">
+      <AccessMiniService/>
+      <Logodesignplans/>
+      <LogoDesignDescription/>
+      <Details/>
+      <Testimonials/>
+    </div>
     <Footer/>
     </>
   )

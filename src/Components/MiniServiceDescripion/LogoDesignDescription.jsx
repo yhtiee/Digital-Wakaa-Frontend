@@ -17,14 +17,17 @@ const LogoDesignDescription = () => {
                     <h2>How We Do It</h2>
                     <div className="action">
                         <div className="acion__one">
+                    <div className="number"><h2>1</h2></div>
                             <h4>Extensive Research</h4>
                             <p>We delve into your industry, target audience, and competition to gather valuable insights that inform the design process. </p>
                         </div>
                         <div className="acion__two">
+                        <div className="number"><h2>2</h2></div>
                             <h4>Creative Design Process</h4>
                             <p>We craft a logo that aligns harmoniously with your brand's identity, paying attention to color palettes, and ensuring your logo seamlessly integrates with your overall branding</p>
                         </div>
                         <div className="acion__three">
+                        <div className="number"><h2>3</h2></div>
                             <h4>Review and Download</h4>
                             <p>Once the logo design is complete, you'll have the opportunity to review it in all its high-resolution glory. </p>
                         </div>
@@ -35,14 +38,17 @@ const LogoDesignDescription = () => {
                     <h2>Why Choose Us</h2>
                     <div className="job">
                         <div className="job__one">
+                        <div className="number"><h2>1</h2></div>
                             <h4>Expert Designers</h4>
                             <p>With their extensive knowledge and passion for design, our designers bring a fresh perspective to every project, delivering exceptional results that exceed your expectations</p>
                         </div>
                         <div className="job__two">
+                        <div className="number"><h2>2</h2></div>
                             <h4>Tailored Approach</h4>
                             <p>"We understand that your brand is unique. That's why we take the time to understand your business, target audience, and industry trends. This valuable insight allows us to create a logo that not only reflects your brand's personality but also resonates with your target market, making a lasting impact."</p>
                         </div>
                         <div className="job__three">
+                        <div className="number"><h2>3</h2></div>
                             <h4>Seamless Collaboration</h4>
                             <p>"We believe in the power of collaboration. Throughout the logo design process, we actively involve you, seeking your feedback and ideas. We value your input and work together to refine and shape the design until it aligns perfectly with your vision, ensuring your complete satisfaction."</p>
                         </div>
@@ -53,22 +59,27 @@ const LogoDesignDescription = () => {
                     <h2>Why We Are Called Logo Design Specialists</h2>
                     <div className="action">
                         <div className="acion__one">
+                        <div className="number"><h2>1</h2></div>
                             <h4>100% White Label</h4>
                             <p>Your logo will be exclusively yours, ready to be integrated seamlessly into your website, marketing materials, and digital presence. </p>
                         </div>
                         <div className="acion__two">
+                        <div className="number"><h2>2</h2></div>
                             <h4>Fully Branded</h4>
                             <p>By incorporating your brand's color palette and visual elements, we ensure that your logo becomes an integral part of your overall branding strategy</p>
                         </div>
                         <div className="acion__three">
+                        <div className="number"><h2>3</h2></div>
                             <h4>Beautifully Designed</h4>
                             <p>Each logo created by our trained designers is a work of art.  </p>
                         </div>
                         <div className="acion__three">
+                        <div className="number"><h2>4</h2></div>
                             <h4>Premium Icons</h4>
                             <p>To ensure superior quality and visual impact, we create and utilize premium graphics and icons in our logo designs</p>
                         </div>
                         <div className="acion__three">
+                        <div className="number"><h2>5</h2></div>
                             <h4>Timely Delivery</h4>
                             <p>Expect to receive your unique logo within a reasonable timeframe, allowing you to proceed with your branding initiatives without delay</p>
                         </div>

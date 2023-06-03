@@ -18,7 +18,7 @@ import BlogsPage from './Pages/BlogsPage';
 import BlogPostPage from './Pages/BlogPostPage';
 import { BlogProvider } from './Context API/BlogContext';
 import Layout from './Pages/Layout/Layout';
-import Dashboard from './Pages/Dashboard/Dashboard';
+// import Dashboard from './Pages/Dashboard/Dashboard';
 import DashboardCards from './Components/DashbordCards/DashboardCards';
 import MiniServicePage from './Pages/MiniServicePage';
 import YouTubeScript from './Pages/YouTubeScript';
@@ -41,9 +41,10 @@ import Ecommerce from './Pages/Ecommerce';
 import Copywriting from './Pages/Copywriting';
 import BlogWriting from './Pages/BlogWriting';
 import { AuthProvider } from './Context API/AuthContext';
-import Orders from './Pages/Dashboard/OrdersPage';
+// import Orders from './Pages/Dashboard/OrdersPage';
 import { OrderProvider } from './Context API/OrdersContext';
 import TechnicalSEO from './Pages/TechnicalSEO';
+import Orders from './Components/Orders/Orders';
 
 
 
@@ -65,8 +66,11 @@ function App() {
                   <Route path="/blog" element={<BlogsPage/>}/>
                   <Route path="/post" element={<BlogPostPage/>}/>
                   <Route path="/" element={<HomePage/>}/>
-                  <Route path="/dashboard" element={<Dashboard/>}/>
-                  <Route path="/orders" element={<Orders/>}/>
+                  <Route element={<Layout/>}>
+                    {/* <Route path="/dashboard" element={<Navigate to="/dashboard" replace/>}/> */}
+                    <Route path="/dashboard" element={<DashboardCards/>}/>
+                    <Route path="/orders" element={<Orders/>}/>
+                  </Route>
                   <Route path="/blog_writing" element={<BlogWriting/>}/>
                   <Route path="/copywriting" element={<Copywriting/>}/>
                   <Route path="/ecommerce" element={<Ecommerce/>}/>

@@ -17,42 +17,42 @@ const Blogwritingplans = () => {
   let {user} = useContext(AuthContext)
   let {createOrder} = useContext(OrderContext)
   
-  let changeToNaira = () => {
-    if (price[0] === "₦"){
+  let changeToPound = () => {
+    if (price[0] === "£"){
       setPrice(price)
     }
     else{
       let len = price.length
       let currentPrice = price.slice(1,len)
       let newPrice = parseInt(currentPrice)
-      let finalPrice = newPrice * 750
-      setPrice(`₦${finalPrice}`)
+      let finalPrice = newPrice * 0.81
+      setPrice(`£${finalPrice}`)
     }
   }
 
-  let changeToNairaPro = () => {
-    if (pricePro[0] === "₦"){
+  let changeToPoundPro = () => {
+    if (pricePro[0] === "£"){
       setPricePro(pricePro)
     }
     else{
       let len = pricePro.length
       let currentPrice = pricePro.slice(1,len)
       let newPrice = parseInt(currentPrice)
-      let finalPrice = newPrice * 750
-      setPricePro(`₦${finalPrice}`)
+      let finalPrice = newPrice * 0.81
+      setPricePro(`£${finalPrice}`)
     }
   }
 
-  let changeToNairaMaster = () => {
-    if (priceMaster[0] === "₦"){
+  let changeToPoundMaster = () => {
+    if (priceMaster[0] === "£"){
       setPriceMaster(priceMaster)
     }
     else{
       let len = priceMaster.length
       let currentPrice = priceMaster.slice(1,len)
       let newPrice = parseInt(currentPrice)
-      let finalPrice = newPrice * 750
-      setPriceMaster(`₦${finalPrice}`)
+      let finalPrice = newPrice * 0.81
+      setPriceMaster(`£${finalPrice}`)
     }
   }
 
@@ -152,7 +152,7 @@ const Blogwritingplans = () => {
                 </div>
                 <div className="currency">
                   <button className='btn currency_btn' onClick={changeToDollar}>$</button>
-                  <button className='btn currency_btn' onClick={changeToNaira}>₦</button>
+                  <button className='btn currency_btn' onClick={changeToPound}>£</button>
                   {/* <button className='btn currency_btn' onClick={changeToEuro}>€</button>
                   <button className='btn currency_btn' onClick={changeToPounds}>£</button> */}
                 </div>
@@ -187,7 +187,7 @@ const Blogwritingplans = () => {
               </div>
                 <div className="currency">
                   <button className='btn currency_btn' onClick={changeToDollarPro}>$</button>
-                  <button className='btn currency_btn' onClick={changeToNairaPro}>₦</button>
+                  <button className='btn currency_btn' onClick={changeToPoundPro}> £</button>
                   {/* <button className='btn currency_btn' onClick={changeToEuroPro}>€</button>
                   <button className='btn currency_btn' onClick={changeToPoundsPro}>£</button> */}
                 </div>
@@ -223,7 +223,7 @@ const Blogwritingplans = () => {
               </div>
                 <div className="currency">
                   <button className='btn currency_btn' onClick={changeToDollarMaster}>$</button>
-                  <button className='btn currency_btn' onClick={changeToNairaMaster}>₦</button>
+                  <button className='btn currency_btn' onClick={changeToPoundMaster}> £</button>
                 </div>
                 <div className="plan__master__cost">
                   <h2>{priceMaster}</h2>

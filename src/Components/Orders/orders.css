@@ -1,11 +1,5 @@
 .orders__wrapper{
-    position: fixed;
-    top: 4rem;
-    margin: 0;
-    height: 100vh;
-    width: 83%;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    width: 100%;
 }
 
 .orders__wrapper > h2{

@@ -12,6 +12,8 @@ import {RiCustomerServiceFill} from "react-icons/ri"
 import {RiLogoutCircleLine} from "react-icons/ri"
 import { useContext } from 'react';
 import AuthContext from '../../Context API/AuthContext';
+import digilogo from "../../assets/DIGIlogo.svg"
+
 
 const SideBar = () => {
 
@@ -22,8 +24,7 @@ const SideBar = () => {
         <div className="sidebar__wrapper">
             <div className="sidebar__header">
                 <Link to='/' className='nav__logo'>
-                    <h4 className='logo1'>DIGITAL</h4>
-                    <h4 className='logo2'>WAKAA</h4>
+                  <img src={digilogo} className="logo" alt="logo" style={{width:"150px", height:"60px"}} />
                 </Link>
             </div>
             <div className="link__items">

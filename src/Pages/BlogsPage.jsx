@@ -17,12 +17,12 @@ const BlogsPage = () => {
   return (
     <>
       <Nav/>
-      <BlogCards/>
-      <Services/>
-      <Details/>
-      {/* <WhyDigitalWaka/> */}
-      <Testimonials/>
-      <EmailSubscribe/>
+      <div className="pageComponent">
+        <BlogCards/>
+        <Services/>
+        <Details/>
+        <Testimonials/>
+      </div>
       <Footer/>
     </>
   )

@@ -6,4 +6,9 @@
 
 .service__card___right > p{
     font-size: larger;
+    text-align: center;
+}
+
+.service__card___right > h2{
+    text-align: center;
 }

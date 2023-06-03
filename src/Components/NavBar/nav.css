@@ -1,11 +1,16 @@
 nav{
     width: 100vw;
-    height: 5rem;
+    /* height: 5rem; */
     display: grid;
     place-items: center;
     position: fixed;
     z-index: 2;
     background: var(--color-white);
+}
+
+.logo{
+    height: 120px;
+    width: 100%;
 }
 
 nav a{
@@ -66,7 +71,7 @@ nav button{
     height: 300px;
     width: 70%;
     position: absolute;
-    top: 3.6rem;
+    top: 4.6rem;
     z-index: 2;
     color: white;
     display: flex;
@@ -76,7 +81,40 @@ nav button{
     /* display: none; */
 }
 
+.services__link2{
+    background: var(--color-primary);
+    height: 610px;
+    width: 70%;
+    position: absolute;
+    top: 5rem;
+    z-index: 2;
+    color: white;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0.95;
+    padding: 1rem;
+    display: none;
+    overflow: auto;
+}
+
+.sidenav__link{
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.sidenav__link:hover{
+    color: var(--color-secondary);
+}
+
 .services__link > div > a{
+    color: white;
+    font-weight: bold;
+}
+
+.services__link2 > div > a{
     color: white;
     font-weight: bold;
 }
@@ -109,12 +147,12 @@ nav button{
     }
 
     .logo{
-        height: 4%;
+        height: 80px;
     }
 
     .nav__menu{
         position: fixed;
-        top: 5rem;
+        top: 4rem;
         right: 0;
         height: fit-content;
         width: 18rem;
@@ -124,9 +162,25 @@ nav button{
         transition: all 600ms ease-in-out;
         transform: translateX(30rem);
     }
+
+    .services__link2{
+        display: flex;
+        position: absolute;
+        gap: 2rem;
+        right: 0;
+        z-index: 3;
+        transition: all 600ms ease-in-out;
+        transform: translateX(30rem);
+    }
+
+    .services__link2.show__menu{
+        transform: translateX(-1rem);
+    }
+
    .nav__menu.show__menu{
     transform: translateX(0rem);
    }
+
     .nav__menu li{
         width: 100%;
         height: 5.4rem;
@@ -146,9 +200,9 @@ nav button{
         color: var(--color-black);
     }
 
-    .nav__menu li a:hover .services__link{
+    /* .nav__menu li a:hover .services__link{
         display: none;
-    }
+    } */
     
     nav button{
         display: inline-block;

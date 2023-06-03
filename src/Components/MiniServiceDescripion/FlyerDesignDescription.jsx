@@ -34,26 +34,32 @@ const FlyerDesignDescription = () => {
                  <h2>Lot’s Of Designers, Here’s Why We Stand Out</h2>
                     <div className="job">
                         <div className="job__one">
+                        <div className="number"><h2>1</h2></div>
                             <h4>100% White Label Excellence</h4>
                             <p>Say goodbye to signatory markings and hello to flyers that seamlessly represent your brand without any distractions</p>
                         </div>
                         <div className="job__two">
+                        <div className="number"><h2>2</h2></div>
                             <h4>Fully Branded Marvels</h4>
                             <p>By incorporating your brand's colors, typography, and visual elements, we ensure your flyers become a natural extension of your brand identity, creating a powerful and cohesive brand experience</p>
                         </div>
                         <div className="job__three">
+                        <div className="number"><h2>3</h2></div>
                             <h4>Community</h4>
                             <p>We'll help you increase engagement and build a strong relationship with your audience by creating and curating high-quality, relevant content.</p>
                         </div>
                         <div className="job__four">
+                        <div className="number"><h2>4</h2></div>
                             <h4>Exquisite Design Expertise</h4>
                             <p>Every flyer created by our skilled designers is a work of art.</p>
                         </div>
                         <div className="job__five">
+                        <div className="number"><h2>5</h2></div>
                             <h4>Premium Graphics and Icons</h4>
                             <p>We go the extra mile by creating and utilizing premium graphics and icons in our flyer designs.</p>
                         </div>
                         <div className="job__five">
+                        <div className="number"><h2>6</h2></div>
                             <h4>Compelling Messaging</h4>
                             <p>Our skilled copywriters work closely with our designers to craft compelling and persuasive messaging that grabs attention, communicates your key selling points, and motivates your audience to take action</p>
                         </div>

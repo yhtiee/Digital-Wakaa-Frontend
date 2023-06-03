@@ -1,12 +1,36 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import "./footer.css"
 import IMG1 from "../../assets/facebook.png"
 import IMG2 from "../../assets/insta.png"
 import IMG3 from "../../assets/twitter.png"
 import IMG4 from "../../assets/linkedin.png"
 import EmailSubscribe from '../EmailSubscribe/EmailSubscribe'
+import ServiceContext from '../../Context API/ServicesContext';
+import {
+    Link,
+} from "react-router-dom";
+
 
 const Footer = () => {
+    
+  let {services} = useContext(ServiceContext)
+  let {getServices} = useContext(ServiceContext)
+  let {retrieveService} = useContext(ServiceContext)
+  let {retrieveServiceWorks} = useContext(ServiceContext)
+
+  useEffect(() => {
+    getServices()
+  }, [])
+
+  let getId = (e, id, name) => {
+    retrieveService(id, name)
+    localStorage.setItem("serviceID", JSON.stringify(id))
+    localStorage.setItem("serviceName", JSON.stringify(name))
+    retrieveServiceWorks(id)
+    console.log(id)
+}
+
+
   return (
     <>
     <div id='footer'>
@@ -14,38 +38,36 @@ const Footer = () => {
         <div className="container footer__container">
             <div className="footer__top">
                 <div className="services">
-                    <h5 className="headings">Services</h5>
+                    <h5 className="headings">SERVICES</h5>
                     <ul>
-                        <li><a href="">Link Building</a></li>
-                        <li><a href="">SEO</a></li>
-                        <li><a href="">Content Writing</a></li>
-                        <li><a href="">Design and Video</a></li>
+                        {services.map((items) => {
+                        return (
+                            <li key={items.id}>
+                                <Link onClick={e => getId(e, items.id, items.name)}>
+                                    {items.name}
+                                </Link>
+                            </li>
+                            )
+                        })}
                     </ul>
                 </div>
                 <div className="company">
-                    <h5 className="headings">Company</h5>
+                    <h5 className="headings">COMPANY</h5>
                     <ul>
-                        <li><a href="">Review</a></li>
-                        <li><a href="">Who We Are</a></li>
-                        <li><a href="">Why Choose Us</a></li>
-                        <li><a href="">Meet The Team</a></li>
-                        <li><a href="">Our History</a></li>
-                        <li><a href="">Careers</a></li>
-                        <li><a href="">Affilates</a></li>
+                        <li><Link to="/about">ABOUT US</Link></li>
+                        <li><Link to="/about">MISION</Link></li>
+                        <li><Link to="/about">VISION</Link></li>
                     </ul>
                 </div>
                 <div className="resources">
-                    <h5 className="headings">Resources</h5>
+                    <h5 className="headings">RESOURCES</h5>
                     <ul>
-                        <li><a href="">Our Blog</a></li>
-                        <li><a href="">SEO Swag</a></li>
-                        <li><a href="">Keyword Rank Checker</a></li>
-                        <li><a href="">Blog Title Generator</a></li>
-                        <li><a href="">How to Use Our Services</a></li>
+                        <li><Link to="/blog">OUR BLOG</Link></li>
+                        <li><Link to="/dashboard">DASHBOARD</Link></li>
                     </ul>
                 </div>
                 <div className="contact__us">
-                    <h5 className="headings">Contatc Us</h5>
+                    <h5 className="headings">CONTACT US</h5>
                     <ul>
                         <li><a href="">Support & FAQs</a></li>
                         <li><a href="">email</a></li>
@@ -69,7 +91,7 @@ const Footer = () => {
                         <p>© 2012 - 2023 DigitalWakaa. All Rights Reserved.</p>
                     </div>
                     <div className="right">
-                        <p>Checkout Our <a href="">Privacy and Cookie Policies</a> and <a href="">Terms</a></p>
+                        <p> Our <a href="">Privacy and Cookie Policies</a> and <a href="">Terms</a></p>
                     </div>
                 </div>
             </div>

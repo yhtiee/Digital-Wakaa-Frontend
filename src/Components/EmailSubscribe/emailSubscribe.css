@@ -25,7 +25,13 @@
     color: white;
 }
 
-.form__wrapper > form > input{
+.form__wrapper-email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__wrapper-email > form > input{
     background: green;
     border: 1px solid white;
     padding: 0.75rem;
@@ -35,20 +41,20 @@
     width: 15rem;
 }
 
-.form__wrapper > form > input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+.form__wrapper-email > form > input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
     opacity: 1; /* Firefox */
 }
 
-.form__wrapper > form > input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.form__wrapper-email > form > input:-ms-input-placeholder { /* Internet Explorer 10-11 */
 color: white;
 }
 
-.form__wrapper > form > input::-ms-input-placeholder { /* Microsoft Edge */
+.form__wrapper-email > form > input::-ms-input-placeholder { /* Microsoft Edge */
 color: white;
 }
 
-.form__wrapper > form > button {
+.form__wrapper-email > form > button {
     background: var(--color-white);
     color: var(--color-dark);
     font-weight: bold;

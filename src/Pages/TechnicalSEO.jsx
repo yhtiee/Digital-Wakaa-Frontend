@@ -23,7 +23,6 @@ const TechnicalSEO = () => {
     <AccessMiniService/>
     <TechnicalSEOplans/>
     <TechnicalSEODescription/>
-    <AboutService/>
     <Details/>
     <Testimonials/>
     </div>

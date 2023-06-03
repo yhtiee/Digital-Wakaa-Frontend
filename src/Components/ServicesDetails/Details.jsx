@@ -1,9 +1,9 @@
 import React from 'react'
 import "./details.css"
-import CS from '../../assets/customer-support.png'
-import SD from '../../assets/ecommerce.png'
-import ET from '../../assets/people.png'
-import RG from '../../assets/refund.png'
+import CS from '../../assets/DigCostumercare.png'
+import SD from '../../assets/DigSpeed.png'
+import ET from '../../assets/DigTeam.png'
+import RG from '../../assets/DigRefund.png'
 
 
 const Details = () => {

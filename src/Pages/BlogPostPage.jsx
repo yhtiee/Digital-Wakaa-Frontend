@@ -18,11 +18,11 @@ const BlogPostPage = () => {
     <>
       <Nav/>
       <BlogPost/>
-      <Services/>
-      <Details/>
-      {/* <WhyDigitalWaka/> */}
-      <Testimonials/>
-      <EmailSubscribe/>
+      <div className="pageComponent">
+        <Services/>
+        <Details/>
+        <Testimonials/>
+      </div>
       <Footer/>
     </>
   )

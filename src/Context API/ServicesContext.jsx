@@ -117,10 +117,10 @@ export const ServiceProvider = ({children}) => {
                 miniService.push(data)
                 setRerievedService(miniService)
                 console.log(data)
-                if (name == "Lights, Camera, Scripts!"){
+                if (name == "Youtube Script Writing"){
                     navigate("/youtube")
                 }
-                if (name == "Blog Like A Boss With Our Expert Writing Services!"){
+                if (name == "Blog Writing"){
                     navigate("/blog_writing")
                 }
                 if (name == "Copywriting"){
@@ -138,13 +138,13 @@ export const ServiceProvider = ({children}) => {
                 if (name == "Lead Generation"){
                     navigate("/lead_gen")
                 }
-                if (name == "Flyer design"){
+                if (name == "Flyer Design"){
                     navigate("/flyer_design")
                 }
-                if (name == "Logo design"){
+                if (name == "Logo Design"){
                     navigate("/logo_design")
                 }
-                if (name == "Video editing"){
+                if (name == "Video Editing"){
                     navigate("/video_editing")
                 }
                 if (name == "Local SEO"){
@@ -153,22 +153,22 @@ export const ServiceProvider = ({children}) => {
                 if (name == "Technical SEO"){
                     navigate("/technical_seo")
                 }
-                if (name == "Facebook ads"){
+                if (name == "Facebook Ads"){
                     navigate("/facebook_ads")
                 }
-                if (name == "Google ads"){
+                if (name == "Google Ads"){
                     navigate("/google_ads")
                 }
-                if (name == "Keyword research"){
+                if (name == "Keyword Research"){
                     navigate("/keyword_search")
                 }
-                if (name == "Landing pages"){
+                if (name == "Landing Pages"){
                     navigate("/landing_pages")
                 }
-                if (name == "WordPress web development"){
+                if (name == "WordPress Web Development"){
                     navigate("/wordpress")
                 }
-                if (name == "Fullstack web development"){
+                if (name == "Fullstack Web Development"){
                     navigate("/full_stack")
                 }
                 if (name == "E-commerce"){

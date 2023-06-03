@@ -5,11 +5,15 @@ header{
     display: grid;
     place-items: center;
     overflow: hidden;
+    background: url("../../assets/DigitalWakaa.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .header__container{
-    display: grid;
-    grid-template-columns: 40% 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
 }
 
@@ -18,50 +22,44 @@ header{
     font-weight: bold;
 }
 
+.header__left > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .header__left{
     display: flex;
+    justify-content: center;
     align-items: center;
     height: 100%;
 }
 
-.header__left h3{
-    color: black;
+.header__left div h1{
+    /* color: whitesmoke; */
+    background: linear-gradient(to right, #0288D1, white, green);
+    background-clip: border-box  padding-box  content-box  no-clip;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 0.6rem;
+    /* animation: moveRight 8s linear infinite; */
+
 }
 
-.header__left p{
+.header__left div p{
     margin: 1.2rem 0 2rem ;
+    color: white;
+    font-size: x-large;
 }
 
-.header__right{
-    position: relative;
-    height: 100%;
-}
-
- .header__right-bg{
-   width: 70rem;
-   height: 75rem;
-   border-radius: 50%; 
-   background: var(--color-secondary); 
-   position: absolute;
-   right: -30rem;
-   bottom:-30rem; 
-}   
-
-.logo1{
-    color: var(--color-primary);
-}
-
-.logo2{
-    color: var(--color-secondary);
-}
-
-.header__image{
-    width: 90%;
-    position: absolute;
-    right: 3rem;
-    bottom: 5.7rem;
-    z-index: 1;
+@keyframes moveRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
 }
 
 @media screen and (max-width:1024px){
@@ -128,6 +126,10 @@ header{
 }
 
 @media screen and (max-width:600px){
+    #header{
+        background-color: whitesmoke;
+    }
+
   .header__container{
     grid-template-columns: 1fr;
     margin-top: 0;
@@ -136,6 +138,7 @@ header{
     width: 22rem;
     bottom: 11rem;
     right: 1rem;
+    display: none;
    }
 
    .header__left{
@@ -148,10 +151,8 @@ header{
     right: -13%;
     bottom: 2rem;
     transform: translate(40% 40%);
+    display: none;
 }
-    #button{
-        display: none;
-    }
 
     .header__left{
         margin-top: -7rem;
@@ -169,12 +170,14 @@ header{
         right: -2rem;
         bottom: 3rem;
         transform: translate(40% 40%);
+        display: none;
     }
 
     .header__image{
         width: 20rem;
         bottom: 12.7rem;
         right: 0.5rem;
+        display: none;
        }
 
     .header__left h3{
@@ -190,6 +193,7 @@ header{
         width: 20rem;
         bottom: 14rem;
         right: -1rem;
+        display: none;
     }
 
     .header__left h3{

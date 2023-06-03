@@ -1,8 +1,8 @@
 .sidebar{
     border-right: 1px solid whitesmoke;
     min-height: 100vh;
-    /* flex: 1; */
-    position: absolute;
+    /* position: absolute; */
+    top: 0rem;
     width: 17.7%;
     background: var(--color-light);
     z-index: 1;
@@ -10,6 +10,10 @@
 
 .sidebar__header{
     padding: 1rem;
+}
+
+section#shadow-host-companion {
+    display: none;
 }
 
 .sidebar__header > .nav__logo{
@@ -28,8 +32,6 @@
     justify-content: left;
     align-items: center;
 }
-
-
 
 .link__items > ul > li > a:hover{
     background: var(--color-primary);

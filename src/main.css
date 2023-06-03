@@ -94,6 +94,7 @@ section{
     border: 1px solid transparent;
     cursor: pointer;
     transition: all 400ms ease;
+    border-radius: 20px;
     
 }
 

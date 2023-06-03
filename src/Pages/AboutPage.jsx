@@ -8,6 +8,7 @@ import About from '../Components/About/About'
 import Facts from '../Components/Facts/Facts'
 import Team from '../Components/Team/Team'
 import WhyDigitalWaka from '../Components/WhyDigitalWakaa/WhyDigitalWaka'
+import AboutUsDescription from '../Components/AboutUsDescription/AboutUsDescription'
 
 const AboutPage = () => {
 
@@ -19,12 +20,11 @@ const AboutPage = () => {
     <>
       <Nav/>
       <About/>
-      {/* <Facts/> */}
-      <Team/>
-      <Details/>
-      {/* <WhyDigitalWaka/> */}
-      <Testimonials/>
-      <EmailSubscribe/>
+        <div className="pageComponent">
+          <AboutUsDescription/>
+          <Details/>
+          <Testimonials/>
+        </div>
       <Footer/>
     </>
   )

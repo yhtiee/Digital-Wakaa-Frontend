@@ -25,11 +25,14 @@ export const BlogCards = () => {
                     return (
                         <div className='click__post' key={items.id} onClick={e => SendId(e, items.id)}>
                             <div className="blog__post">
+                                <h4>{items.title}</h4>
                                 <img src={items.image} alt="" />
                                 <div className="info_wrapper">
-                                    <h2>{items.title}</h2>
-                                    {/* <h4>{items.sub_title}</h4> */}
-                                    <p>Date Posted {items.date}</p>
+                                    <p>{items.post}</p>
+                                    <p className='date'>Date Posted {items.date}</p>
+                                    <button className='btn btn-primary'>
+                                        Read Full Article
+                                    </button>
                                 </div>
                             </div>
                         </div>

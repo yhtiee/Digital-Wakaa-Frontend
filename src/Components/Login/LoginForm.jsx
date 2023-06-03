@@ -1,6 +1,7 @@
 import React, {useContext, useRef} from 'react'
 import "./login.css"
 import AuthContext from '../../Context API/AuthContext'
+import { Link } from 'react-router-dom'
 
 const LoginForm = () => {
   let {loginUser} = useContext(AuthContext)
@@ -19,7 +20,7 @@ const LoginForm = () => {
     <section id='login__form'>
           <div class="container loginform__wrapper">
             <form className="login__form" onSubmit={SubmitInfo}>
-                <h4>Login</h4>
+                <h2>Welcome Back</h2>
                 <div>
                     <label>Username</label>
                     <input type="text" name="username" ref={username} required/>
@@ -34,7 +35,7 @@ const LoginForm = () => {
                       Login
                     </button>
                 </div>
-                <p>Not Registered? <a href="/signup">Create Account </a></p>
+                <p>Not Registered? <Link to="/signup">Create Account </Link></p>
             </form>
           </div>
     </section>

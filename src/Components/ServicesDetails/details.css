@@ -1,6 +1,6 @@
 #details{
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
+    /* border-top-left-radius: 50px;
+    border-top-right-radius: 50px; */
     background: var(--color-light);
     padding: 0;
     padding-bottom: 2rem;
@@ -25,7 +25,7 @@
 .details__wrapper > div{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     background: var(--color-white);
     flex-basis: 250px;
@@ -35,24 +35,13 @@
     border-radius: 20px;
 }
 
-.delivery{
-    height: 70px;
-}
-
-.team{
-    height: 80px;
-}
-
-.support{
-    height: 60px;
-    margin-top: 2rem;
-}
-
-.refund{
-    height: 60px;
-    margin-top: 2rem;
-}
 
 .detail__bottom > p, h4{
     text-align: center;
+}
+
+@media screen and (max-width: 1024px){
+    .details__wrapper > div{
+        justify-content: center;
+    }
 }

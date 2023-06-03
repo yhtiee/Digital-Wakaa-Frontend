@@ -11,6 +11,7 @@ import BlogContext from '../../Context API/BlogContext';
 import ServiceContext from '../../Context API/ServicesContext';
 import AuthContext from '../../Context API/AuthContext';
 import logo from "../../assets/logo.svg"
+import digilogo from "../../assets/DIGIlogo.svg"
 
 const Nav = () => {
   
@@ -118,16 +119,14 @@ const Nav = () => {
       <div className="container nav__container">
 
         <Link to='/' className='nav__logo' onClick={handleFunctionHome} >
-            <h2 className='logo1'>DIGITAL</h2>
-            <h2 className='logo2'>WAKAA</h2>
-          {/* <img src={logo} className="logo" alt="logo" /> */}
+          <img src={digilogo} className="logo" alt="logo" />
         </Link>
         
-        <ul className={`nav__menu ${navbarOpen ? " show__menu" : ""}`} >
+        <ul className={`nav__menu ${navbarOpen ? "" : ""}`} >
             <li className='nav__links' onMouseEnter={isLargeScreen ? () => setLinkOptions(true) : null}  onMouseLeave={()=>setLinkOptions(false)} ><Link to="/services" id='services__link'  onClick={handleFunctionServices} className={activeNav === "/services" ? "active": " "}>SERVICES</Link>
             {
             isLinkOptions === true &&
-            <div  className='services__link'>
+            <div  className="services__link" >
               {services.map((items, index) => {
                 return (
                   <div key={items.id}>
@@ -152,7 +151,6 @@ const Nav = () => {
             }
             </li>
             <li className='nav__links'><Link to="/about"  onClick={handleFunctionAbout} className={activeNav === "/about" ? "active": " "}>ABOUT</Link></li>
-            {/* <li className='nav__links'><Link to="academy/"  onClick={handleFunctionAcademy} className={activeNav ==="academy/" ? "active": ""}>ACADEMY</Link></li> */}
             <li className='nav__links'><Link to="/blog"  onClick={handleFunctionBlog} className={activeNav ==="/blog" ? "active": ""}>BLOG</Link></li>
 
             {user? (<>
@@ -164,7 +162,38 @@ const Nav = () => {
         <button onClick={openToogle}> {navbarOpen? <AiOutlineClose id='close-menu-btn'/> : <GiHamburgerMenu id='open-menu-btn' /> }</button>
         
       </div>
-    
+      <div  className={`services__link2 ${navbarOpen ? "show__menu" : ""}`} >
+              {services.map((items, index) => {
+                return (
+                  <div key={items.id}>
+                    <Link onClick={e => getId(e, items.id, items.name)}>{items.name}</Link>
+                    {miniService.map((service) => {
+                      {
+                        if (service.service == index + 1){
+                          return (
+                            <div className='mini_services'  key={service.id}>
+                              <Link onClick={e => getIdMiniService(e, service.id, service.name)}>
+                              {service.name}
+                              </Link>
+                            </div>
+                          )
+                        }
+                      }
+                    })}
+                  </div>
+                )
+              })}
+              <Link to="/about" className='sidenav__link'>ABOUT</Link>
+              <Link to="/blog" className='sidenav__link'>BLOG</Link>
+              { user?
+              <Link to="/dashboard" className='sidenav__link'>DASHBOARD</Link>:
+              ( <>
+                <Link to="/signup" className='sidenav__link'>SIGN UP</Link> 
+                <Link to="/signup" className='sidenav__link'>LOGIN</Link> 
+                </>
+              )
+               }
+            </div>
     </nav>
   )
 }

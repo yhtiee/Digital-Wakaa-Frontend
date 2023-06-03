@@ -36,8 +36,8 @@ const Services = () => {
                   return (
                     <div key={items.id} className='item__wrapper'>
                       <Link onClick={e => getId(e, items.id, items.name)}>
-                        <h5 className='service__name'>{items.name}</h5>
                         <img src={items.image} alt="" className='service__image' />
+                        <h5 className='service__name'>{items.name}</h5>
                       </Link>
                     </div>
                   )

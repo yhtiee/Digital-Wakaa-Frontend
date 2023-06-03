@@ -1,32 +1,30 @@
 #about__digital__wakaa{
     position: relative;
     top: 7rem;
-    background: var(--color-white);
+    background: url("../../assets/DigAboutUs.jpg");
+    background-size: cover;
     padding: 0;
     margin: 0;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about__container{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 1rem;
 }
 
-.about__container > div {
+.about__header h1{
+    background: linear-gradient(to left, #0288D1, green);
+    background-clip: border-box  padding-box  content-box  no-clip;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* .about__container > div {
     flex-basis: 250px;
     flex-grow: 1;
-}
-
-.about__header__right > img{
-    height: 300px;
-}
-
-/* .about__header__left{
-    width: 50%;
 } */
-
-.about__header__right{
-    height: 300px;
-}

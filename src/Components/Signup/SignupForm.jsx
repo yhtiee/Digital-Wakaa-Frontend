@@ -1,6 +1,7 @@
 import React, {useContext, useRef} from 'react'
 import "./signup.css"
 import AuthContext from '../../Context API/AuthContext'
+import { Link } from 'react-router-dom'
 
 const SignupForm = () => {
 
@@ -53,7 +54,7 @@ const SignupForm = () => {
                       Create Account 
                     </button>
                 </div>
-                <p>Already Created? <a href="/login">login</a></p>
+                <p>Already Created? <Link to="/login">login</Link></p>
             </form>
           </div>
         </div>

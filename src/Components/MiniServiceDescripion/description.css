@@ -1,8 +1,13 @@
 
+/* #descriptions{
+    background-color: var(--color-light);
+} */
+
 .description__wrapper{
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
 }
 
 .description__wrapper > div  > h2 {
@@ -27,17 +32,33 @@
     justify-content: space-between;
     gap: 2rem;
     margin-top: 1rem;
+
 }
 
 .action > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     flex-basis: 300px;
     flex-grow: 1;
-    background: var(--color-white);
+    /* background: var(--color-light); */
     padding: 2rem;
+    border-radius: 20px;
 }
 
-.action > div > h4 {
+/* .action > div > h4 {
     color: var(--color-primary);
+} */
+/* 
+.job > div > img{
+    height: 70px;
+    width: 30%;
+} */
+
+.action > div > img{
+    height: 70px;
+    width: 30%;
 }
 
 .action > div > p{
@@ -53,16 +74,53 @@
 }
 
 .job > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     flex-basis: 300px;
     flex-grow: 1;
     background: var(--color-white);
     padding: 2rem;
 }
 
-.job > div > h4 {
-    color: var(--color-secondary);
+.job__four > img{
+    height: 70px;
+    width: 25%;
 }
+
+/* .job > div > h4 {
+    color: var(--color-secondary);
+} */
 
 .job > div > p{
     text-align: center;
+}
+
+.action > div > .number{
+    border: 5px solid var(--color-primary);
+    padding: 2rem;
+    border-radius: 30px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.action > div > .number > h2{
+    color: green;
+}
+
+.job > div > .number{
+    border: 5px solid var(--color-secondary);
+    padding: 2rem;
+    border-radius: 30px;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.job > div > .number > h2{
+    color: var(--color-secondary);
 }

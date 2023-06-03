@@ -25,7 +25,6 @@ const Googleads = () => {
       <AccessMiniService/>
       <Googleadsplans/>
       <GoogleAdsDescription/>
-      <AboutService/>
       <Details/>
       <Testimonials/>
     </div>
