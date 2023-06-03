@@ -6,7 +6,7 @@ import "./layout.css"
 
 const Layout = () => {
 
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true)
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
 
   return (
     <div className='layout-wrapper' style={{display:"flex"}}>
