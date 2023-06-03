@@ -11,9 +11,9 @@ const DashboardNav = ({isSidebarOpen, setIsSidebarOpen}) => {
             <GiHamburgerMenu id='menu-btn'/>
         </button>
         <div className="dashboard-links">
-        <Link>Services</Link>
-        <Link>About</Link>
-        <Link>Blog</Link>
+        <Link to="/services">Services</Link>
+        <Link to="/about">About</Link>
+        <Link to="/blog">Blog</Link>
         </div>
     </div>
   )
