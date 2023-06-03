@@ -67,7 +67,6 @@ function App() {
                   <Route path="/post" element={<BlogPostPage/>}/>
                   <Route path="/" element={<HomePage/>}/>
                   <Route element={<Layout/>}>
-                    {/* <Route path="/dashboard" element={<Navigate to="/dashboard" replace/>}/> */}
                     <Route path="/dashboard" element={<DashboardCards/>}/>
                     <Route path="/orders" element={<Orders/>}/>
                   </Route>
