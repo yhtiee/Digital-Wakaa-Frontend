@@ -1,5 +1,5 @@
 header{
-    min-height: 90vh;
+    min-height: 100vh;
     position: relative;
     top: 5rem;
     display: grid;
@@ -66,6 +66,21 @@ header{
     #header{
         height: 720px;
         padding: 14rem 0 0;
+    }
+
+    /* .header__container{
+        margin-top: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    } */
+
+    .header__left div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
     }
 
     .header__left h3{
@@ -189,6 +204,8 @@ header{
     }
 }
 @media screen and (max-width:320px){
+    
+
     .header__right-bg{
         display: none;
     }

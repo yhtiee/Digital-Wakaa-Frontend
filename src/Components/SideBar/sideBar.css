@@ -8,6 +8,8 @@
     z-index: 1;
 }
 
+
+
 .sidebar__header{
     padding: 1rem;
 }
@@ -40,4 +42,23 @@ section#shadow-host-companion {
 
 .link__items > ul > li{
     border: 1px solid whitesmoke;
+}
+
+@media screen and (max-width:1024px) {
+    .sidebar{
+        display: none;
+    }
+
+    .sidebar-close{
+        display: none;
+    }
+    
+    .sidebar-open{
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 4rem;
+        width: 50%;
+        min-height: 90vh;
+    }
 }

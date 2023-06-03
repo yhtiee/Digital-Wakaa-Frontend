@@ -1,0 +1,28 @@
+.dashboard-nav button{
+    font-size: 2rem;
+    background: none;
+}
+
+.dashboard-nav button:hover{
+    cursor: pointer;
+}
+
+.dashboard-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 3rem;
+    /* background-color: whitesmoke; */
+}
+
+.dashboard-links{
+    display: flex;
+    gap: 3rem;
+}
+
+.dashboard-links a{
+    text-decoration: none;
+    color: black;
+}

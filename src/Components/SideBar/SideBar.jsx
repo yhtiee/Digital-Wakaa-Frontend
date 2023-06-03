@@ -15,12 +15,12 @@ import AuthContext from '../../Context API/AuthContext';
 import digilogo from "../../assets/DIGIlogo.svg"
 
 
-const SideBar = () => {
+const SideBar = ({isSidebarOpen, setIsSidebarOpen}) => {
 
     let {logoutUser} = useContext(AuthContext)
 
   return (
-    <div className="sidebar">
+    <div className={`sidebar ${isSidebarOpen? "sidebar-open":"sidebar-close"}`}>
         <div className="sidebar__wrapper">
             <div className="sidebar__header">
                 <Link to='/' className='nav__logo'>
@@ -29,8 +29,8 @@ const SideBar = () => {
             </div>
             <div className="link__items">
                 <ul className='links'>
-                    <li><Link to="/dashboard"><RxDashboard/> <p>DASHBOARD</p> </Link></li>
-                    <li><Link to="/orders"><GiShoppingCart/> <p>ORDERS</p></Link></li>
+                    <li onClick={() => setIsSidebarOpen(!isSidebarOpen)}><Link to="/dashboard"><RxDashboard/> <p>DASHBOARD</p> </Link></li>
+                    <li onClick={() => setIsSidebarOpen(!isSidebarOpen)}><Link to="/orders"><GiShoppingCart/> <p>ORDERS</p></Link></li>
                     <li><a href=""><TiFolderAdd/> <p>ADD ORDERS</p></a></li>
                     <li><a href=""><VscAccount/> <p>ACCOUNT SETTINGS</p></a></li>
                     <li><a href="/" onClick={logoutUser}><RiLogoutCircleLine/> <p>LOGOUT</p></a></li>

@@ -1,0 +1,9 @@
+.outlet-wrapper{
+    width: 90%;
+}
+
+@media screen and (max-width:1024px){
+    .outlet-wrapper{
+        width: 100%;
+    }
+}
