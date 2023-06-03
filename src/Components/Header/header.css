@@ -1,5 +1,5 @@
 header{
-    height: calc(100vh - 5rem);
+    min-height: 70vh;
     position: relative;
     top: 5rem;
     display: grid;
