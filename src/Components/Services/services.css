@@ -39,3 +39,19 @@
     color: var(--color-secondary);
     text-align: center;
 }
+
+@media screen and (max-width:1088px) {
+    .wrapper > div {
+        flex-basis: 150px;
+        height: 20rem;
+        flex-grow: 1;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .wrapper > div {
+        flex-basis: 250px;
+        height: 20rem;
+        flex-grow: 1;
+    }
+}

@@ -35,13 +35,26 @@
     border-radius: 20px;
 }
 
-
 .detail__bottom > p, h4{
     text-align: center;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width:1088px) {
+    .details__wrapper > div{
+        flex-basis: 100px;
+        height: 24rem;
+    }
+}
+
+@media screen and (max-width: 1000px){
     .details__wrapper > div{
         justify-content: center;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .details__wrapper > div{
+        flex-basis: 250px;
+        height: 23rem;
     }
 }

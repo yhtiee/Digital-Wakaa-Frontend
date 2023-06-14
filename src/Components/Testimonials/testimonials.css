@@ -64,3 +64,9 @@
     width: 30%;
     height: 100%;
 }
+
+@media screen and (max-width:1330px) {
+    .testimonial__wrapper > div {
+        flex-basis: 200px;
+    }
+}
