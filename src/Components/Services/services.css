@@ -40,6 +40,15 @@
     text-align: center;
 }
 
+@media screen and (max-width:1350px) {
+    .wrapper > div {
+        flex-basis: 150px;
+        height: 20rem;
+        flex-grow: 1;
+    }
+}
+
+
 @media screen and (max-width:1088px) {
     .wrapper > div {
         flex-basis: 150px;
