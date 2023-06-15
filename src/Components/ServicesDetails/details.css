@@ -39,6 +39,13 @@
     text-align: center;
 }
 
+@media screen and (max-width:1350px) {
+    .details__wrapper > div{
+        flex-basis: 100px;
+        height: 24rem;
+    }
+}
+
 @media screen and (max-width:1088px) {
     .details__wrapper > div{
         flex-basis: 100px;
