@@ -54,16 +54,16 @@ const Footer = () => {
                 <div className="company">
                     <h5 className="headings">COMPANY</h5>
                     <ul>
-                        <li><Link to="/about">ABOUT US</Link></li>
-                        <li><Link to="/about">MISION</Link></li>
-                        <li><Link to="/about">VISION</Link></li>
+                        <li><Link to="/about">About Us</Link></li>
+                        <li><Link to="/about">Mission</Link></li>
+                        <li><Link to="/about">Vision</Link></li>
                     </ul>
                 </div>
                 <div className="resources">
                     <h5 className="headings">RESOURCES</h5>
                     <ul>
-                        <li><Link to="/blog">OUR BLOG</Link></li>
-                        <li><Link to="/dashboard">DASHBOARD</Link></li>
+                        <li><Link to="/blog">Our Blog</Link></li>
+                        <li><Link to="/dashboard">Dashboard</Link></li>
                     </ul>
                 </div>
                 <div className="contact__us">

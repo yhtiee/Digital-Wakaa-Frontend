@@ -94,6 +94,30 @@
     gap: 1rem;
 }
 
+.company > h5{
+    text-align: start;
+}
+
+.company > ul > li > a{
+    text-align: start;
+}
+
+.resources > h5{
+    text-align: start;
+}
+
+.resources > ul > li > a{
+    text-align: start;
+}
+
+.services > h5{
+    text-align: start;
+}
+
+.services > ul > li > a{
+    text-align: start;
+}
+
 @media screen and (max-width: 1024px){
     .footer__top > div{
         justify-content: center;
