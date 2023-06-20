@@ -6,7 +6,7 @@ const EmailSubscribe = () => {
     <div id='email__subscribe'>
       <div className="container enail__container">
         <div>
-          <h4>Subscribe to get Latetst Updates on Digital Wakaa Services</h4>
+          <h4>Subscribe to get Latest Updates on Our Services</h4>
         </div>
         <div className='form__wrapper-email'>
           <form>
